@@ -9,5 +9,5 @@ accounts/migrations
 core/migrations
 
 # __pycache__
-config/__pycache__
-core/__pycache__
+config/__pycache__/
+core/__pycache__/
