@@ -1,0 +1,9 @@
+# virtual envs
+.venv
+
+# database
+db.sqlite3
+
+# migrations 
+accounts/migrations
+core/migrations
