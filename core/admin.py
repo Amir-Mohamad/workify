@@ -1,3 +1,5 @@
 from django.contrib import admin
+from . models import AboutUsModel
 
-# Register your models here.
+class AboutUsAdmin(admin.ModelAdmin):
+    list_editable = ('name', 'is_active')
