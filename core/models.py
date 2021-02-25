@@ -9,5 +9,10 @@ class AboutUsModel(models.Model):
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('created')
+        verbose_name = 'Team Memeber'
+        verbose_name_plural = 'Team Memebers'
+
     def __str__(self):
         return self.name
