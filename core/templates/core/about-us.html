@@ -1,1 +1,10 @@
-about us
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for member in members %}
+    <div class="container">
+        <p>{{ member.name }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
