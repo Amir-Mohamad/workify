@@ -10,7 +10,7 @@ class AboutUsModel(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ('created')
+        ordering = ('created',)
         verbose_name = 'Team Memeber'
         verbose_name_plural = 'Team Memebers'
 
