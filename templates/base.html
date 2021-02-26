@@ -1,24 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>megacoders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block meta-title %}Megacoders{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
-    <!--Navbar-->
     {% include 'inc/navbar.html' %}
-    <!--Django Messages-->
-    {% include 'inc/messages.html' %}
-
-    <br>
-    <!--Main Website content-->
-    {% block content %}
-
-    {% endblock content %}
-
-    <br>
-    {% include 'inc/footer.html' %}
+    <div class="jumbotron">
+        {% include 'inc/messages.html' %}
+        {% block content %}{% endblock %}
+    </div>
 </body>
 </html>

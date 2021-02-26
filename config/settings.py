@@ -18,8 +18,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # local apps
-    'core.apps.CoreConfig'
-    'blog.apps.BlogConfig',
+    'core.apps.CoreConfig',
+    'accounts.apps.AccountsConfig',
+    # 'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,7 @@ DATABASES = {
 }
 
 
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -74,6 +76,12 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.authentication.EmailBackend',
 ]
 
 
@@ -90,10 +98,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
-STATICFILES_DIRS = [
-    BASE_DIR , "static",
-]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
+STATICFILES_DIRS = [BASE_DIR, "static"]
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
