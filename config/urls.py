@@ -24,7 +24,11 @@ urlpatterns = [
     # path('blog/', include('blog.urls')),
 =======
     path('accounts/', include('accounts.urls', namespace="accounts")),
+<<<<<<< HEAD
 >>>>>>> 93a180c86b0f9e526d58cde7058532e7682a8f61
+=======
+>>>>>>> ali
+>>>>>>> 3adfdb2b59297ec129c99c0dc7150e1e4997db7b
     path('', include('core.urls', namespace="core")),
     path('admin/', admin.site.urls),
 ]
