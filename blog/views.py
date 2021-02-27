@@ -9,6 +9,8 @@ class ArticleList(ListView):
     queryset = Article.objects.filter(is_active=True)
 
 class ArticleDetail(DetailView):
+    template_name = 'blog/article_detail.html'
+
     def get_queryset(self):
         id = self.kwargs['id']
         slug = self.kwargs['slug']
