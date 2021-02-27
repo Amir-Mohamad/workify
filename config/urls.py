@@ -19,16 +19,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-<<<<<<< HEAD
-    # path('accounts/', include('accounts.urls', namespace="accounts")),
-    # path('blog/', include('blog.urls')),
-=======
     path('accounts/', include('accounts.urls', namespace="accounts")),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 93a180c86b0f9e526d58cde7058532e7682a8f61
 =======
 >>>>>>> ali
 >>>>>>> 3adfdb2b59297ec129c99c0dc7150e1e4997db7b
+=======
+>>>>>>> 6fa5f51ee28cbad4f2a2443e56b95aefb0712f69
     path('', include('core.urls', namespace="core")),
     path('admin/', admin.site.urls),
 ]
