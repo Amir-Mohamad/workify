@@ -6,4 +6,6 @@ from .models import Article, Category
 
 class ArticleList(ListView):
     template_name = 'blog/article_list.html'
+    queryset = Article.objects.filter(is_active=True)
+
 
