@@ -15,7 +15,7 @@ class User(AbstractUser):
 	USERNAME_FIELD = 'email'
 	REQUIRED_FIELDS = []
 
-	backend = 'accounts.authentication.EmailBackend'
+	# backend = 'accounts.authentication.EmailBackend'
 
 	def thumbnail(self):
 		return format_html("<img width=40 height=25 style='border-radius: 20px;' src='{}'>".format(self.avatar.url))
