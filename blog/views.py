@@ -10,7 +10,7 @@ class ArticleList(ListView):
 
 class ArticleDetail(DetailView):
     template_name = 'blog/article_detail.html'
-    # query_pk_and_slug¶ = True (Im not sure but i think this will do the same get_queryset())
+    # query_pk_and_slug = True (Im not sure but i think this will do the same get_queryset())
     
     def get_queryset(self):
         id = self.kwargs['id']
