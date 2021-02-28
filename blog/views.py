@@ -23,3 +23,5 @@ class CategoryList(ListView):
 
     def get_queryset(self):
         category = self.kwargs['category']
+        queryset = Article.objects.filter(category=category)
+        return queryset
