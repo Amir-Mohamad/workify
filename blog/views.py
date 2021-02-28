@@ -1,3 +1,4 @@
+from django.db.models import query
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from .models import Article, Category
@@ -21,10 +22,16 @@ class ArticleDetail(DetailView):
 class CategoryList(ListView):
     template_name = 'blog/category_list.html'
 
-    def get_queryset(self):
-        category = self.kwargs['category']
-        queryset = Article.objects.filter(category=category)
-        return queryset
+	def get_queryset(self):
+		global category
+		slug = self.kwargs.get('slug')
+		category = get_object_or_404(Category.objects.active(), slug=slug)
+		return category.articles.published()
+
 
 class AuthorList(ListView):
     template_name = 'blog/author_list.html'
+
+    def get_queryset(self):
+        author = self.kwargs['author']
+        return author.
