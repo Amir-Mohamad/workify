@@ -25,3 +25,6 @@ class CategoryList(ListView):
         category = self.kwargs['category']
         queryset = Article.objects.filter(category=category)
         return queryset
+
+class AuthorList(ListView):
+    template_name = 'blog/author_list.html'
