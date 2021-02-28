@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
 from .models import Article, Category
 from django.views.generic.detail import DetailView
-
+from accounts.models import User
 
 class ArticleList(ListView):
     template_name = 'blog/article_list.html'
@@ -39,8 +39,8 @@ class CategoryList(ListView):
 class AuthorList(ListView):
     template_name = 'blog/author_list.html'
 
-	def get_queryset(self):
-		global author
-		username = self.kwargs.get('username')
-		author = get_object_or_404(User, username=username)
-		return author.articles.published()
+    def get_queryset(self):
+        global author
+        username = self.kwargs.get('username')
+        author = get_object_or_404(User, username=username)
+        return author.articles.published()
