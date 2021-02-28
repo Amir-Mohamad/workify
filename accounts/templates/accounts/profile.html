@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="post">
+
+  {% csrf_token %}
+  
+  {{ form.email|as_crispy_field }}
+
+  {{ form.first_name|as_crispy_field }}
+
+  {{ form.last_name|as_crispy_field }}
+
+  {{ form.avatar|as_crispy_field }}
+
+  <a href="{% url 'accounts:password_change' %}">Do you want change password ?</a><br><br>
+
+  <input type="submit" value="update" class="btn btn-success">	
+</form>
+
+{% endblock %}

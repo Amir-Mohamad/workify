@@ -8,12 +8,14 @@ from accounts.manager import UserManager
 class User(AbstractUser):
 	username = None
 	email = models.EmailField(max_length=125, unique=True)
+	is_author = models.BooleanField('author', default=False,
+		help_text='Determines whether this user is allowed to write an article')
 	avatar = models.ImageField(upload_to='avatars/', default='avatars/default.jpg', blank=True, null=True)
 
 	objects = UserManager()
 
 	USERNAME_FIELD = 'email'
-	REQUIRED_FIELDS = []
+	REQUIRED_FIELDS = ['first_name', 'last_name']
 
 	# backend = 'accounts.authentication.EmailBackend'
 

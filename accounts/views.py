@@ -1,19 +1,32 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
-from django.contrib.auth.views import LoginView, LogoutView
+from django.views.generic import CreateView, UpdateView
+from django.contrib.auth import views as av # auth views
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin as sucmsg
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from accounts.models import User
-from accounts.forms import RegisterForm
+from accounts.forms import RegisterForm, ProfileForm
 # Create your views here.
 
 
-class UserRegister(CreateView):
+class Profile(LoginRequiredMixin, sucmsg, UpdateView):
+	model = User
+	template_name = 'accounts/profile.html'
+	form_class = ProfileForm
+	success_url = reverse_lazy('accounts:profile')
+	success_message = 'your account updated.'
+
+	def get_object(self):
+		return User.objects.get(pk=self.request.user.pk)
+
+
+class UserRegister(sucmsg, CreateView):
 	template_name = 'accounts/register.html'
 	form_class = RegisterForm
+	success_url = reverse_lazy('core:home')
+	success_message = 'Register was successfully and you logged in.'
 
 	def get(self, request, *args, **kwargs):
 		if request.user.is_authenticated:
@@ -31,22 +44,15 @@ class UserRegister(CreateView):
 			login(self.request, self.object)
 		return valid
 
-	def get_success_url(self):
-		messages.success(self.request, 'Register was successfully and you logged in.')
-		return reverse_lazy('core:home')
 
-
-class UserLogin(LoginView):
+class UserLogin(sucmsg, av.LoginView):
 	template_name = 'accounts/login.html'
+	success_message = 'login was successfully.'
 
 	def get(self, request, *args, **kwargs):
 		if request.user.is_authenticated:
 			return redirect('/')
 		return super().get(request, *args, **kwargs)
-
-	def get_success_url(self):
-		messages.success(self.request, 'login was successfully.')
-		return reverse_lazy('core:home')
 
 
 @login_required
@@ -56,5 +62,8 @@ def UserLogout(request):
     return redirect('core:home')
 
 
-# class UserLogout(SuccessMessageMixin, LogoutView):
-# 	success_message = 'logout was successfully.'
+# Password Change
+class pss1(sucmsg, av.PasswordChangeView):
+	template_name = 'accounts/password_change_form.html'
+	success_url = reverse_lazy('core:home')
+	success_message = 'your password changed successfully.'
