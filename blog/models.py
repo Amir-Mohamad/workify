@@ -22,4 +22,4 @@ class Article(models.Model):
     promote = models.BooleanField(default=False)
 
     def __str__(self):
-        return '{self.author} wrote {self.title} at {self.created}'
+        return f'{self.author} wrote {self.title} at {self.created}'
