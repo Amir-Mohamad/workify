@@ -37,6 +37,7 @@ class CategoryList(ListView):
 
 
 class AuthorList(ListView):
+    paginate_by = 5
     template_name = 'blog/author_list.html'
 
     def get_queryset(self):
