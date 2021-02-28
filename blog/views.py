@@ -17,3 +17,6 @@ class ArticleDetail(DetailView):
         slug = self.kwargs['slug']
         queryset = get_object_or_404(Article, id=id, slug=slug)
         return queryset
+
+class CategoryList(ListView):
+    template_name = 'blog/category_list.html'
