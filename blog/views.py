@@ -20,3 +20,6 @@ class ArticleDetail(DetailView):
 
 class CategoryList(ListView):
     template_name = 'blog/category_list.html'
+
+    def get_queryset(self):
+        category = self.kwargs['category']
