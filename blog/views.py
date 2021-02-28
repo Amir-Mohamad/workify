@@ -29,10 +29,18 @@ class CategoryList(ListView):
         category = get_object_or_404(Category.objects.is_active(), slug=slug)
         return category.articles.published()
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = category
+        return context
+
+
 
 class AuthorList(ListView):
     template_name = 'blog/author_list.html'
 
-    def get_queryset(self):
-        author = self.kwargs['author']
-        return author.
+	def get_queryset(self):
+		global author
+		username = self.kwargs.get('username')
+		author = get_object_or_404(User, username=username)
+		return author.articles.published()
