@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     # Local Apps
     'accounts.apps.AccountsConfig',
+    'blog.apps.BlogConfig',
     'core.apps.CoreConfig',
 ]
 
