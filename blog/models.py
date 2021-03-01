@@ -6,6 +6,7 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, unique=True)
     is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ('-created',)

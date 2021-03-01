@@ -8,7 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'is_active')
+    list_display = ('title', 'is_active', 'promote')
     list_filter = ('is_active', 'title', 'promote')
     list_editable = ('is_active','promote')
     prepopulated_fields = {'slug': ('title',)}
