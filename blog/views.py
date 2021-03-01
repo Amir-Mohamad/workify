@@ -11,14 +11,13 @@ class ArticleList(ListView):
     context_object_name = 'articles'
 
 class ArticleDetail(DetailView):
-    template_name = 'blog/article_detail.html'
-    # query_pk_and_slug = True (Im not sure but i think this will do same as get_queryset())
-    
-    def get_queryset(self):
-        id = self.kwargs['id']
-        slug = self.kwargs['slug']
-        queryset = get_object_or_404(Article.objects.filter(is_active=True), id=id, slug=slug)
-        return queryset
+    context_object_name = 'articles'
+
+    def get_object(self):
+            slug = self.kwargs.get('slug')
+            id = self.kwargs.get('id')
+            article = get_object_or_404(Article, id=id, slug=slug)
+            return article
 
 class CategoryList(ListView):
     paginate_by = 5
