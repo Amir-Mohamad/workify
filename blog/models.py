@@ -36,3 +36,5 @@ class Article(models.Model):
 
     def __str__(self):
         return f'{self.author} wrote {self.title} at {self.created}'
+
+class Like(models.Model):
