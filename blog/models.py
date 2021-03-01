@@ -7,6 +7,12 @@ class Category(models.Model):
     slug = models.SlugField(unique=True)
     is_active = models.BooleanField(default=True)
 
+    class Meta:
+        ordering = ('-created')
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+
     def __str__(self):
         return self.name
 

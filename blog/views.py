@@ -1,9 +1,9 @@
-from django.db.models import query
 from django.shortcuts import get_object_or_404, render
 from django.views.generic.list import ListView
-from .models import Article, Category
 from django.views.generic.detail import DetailView
 from accounts.models import User
+from .models import Article, Category
+
 
 class ArticleList(ListView):
     template_name = 'blog/article_list.html'
@@ -11,12 +11,12 @@ class ArticleList(ListView):
 
 class ArticleDetail(DetailView):
     template_name = 'blog/article_detail.html'
-    # query_pk_and_slug = True (Im not sure but i think this will do the same get_queryset())
+    # query_pk_and_slug = True (Im not sure but i think this will do same as get_queryset())
     
     def get_queryset(self):
         id = self.kwargs['id']
         slug = self.kwargs['slug']
-        queryset = get_object_or_404(Article, id=id, slug=slug)
+        queryset = get_object_or_404(Article.objects.is_active(), id=id, slug=slug)
         return queryset
 
 class CategoryList(ListView):
@@ -33,8 +33,6 @@ class CategoryList(ListView):
         context = super().get_context_data(**kwargs)
         context['category'] = category
         return context
-
-
 
 class AuthorList(ListView):
     paginate_by = 5
