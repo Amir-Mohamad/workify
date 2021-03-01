@@ -21,6 +21,12 @@ class Profile(LoginRequiredMixin, message, UpdateView):
 	def get_object(self):
 		return User.objects.get(pk=self.request.user.pk)
 
+	def get_form_kwargs(self):
+		kwargs = super().get_form_kwargs()
+		file = self.request.FILES.get('avatar')
+		kwargs.update({'file': file})
+		return kwargs
+
 
 class UserRegister(message, CreateView):
 	template_name = 'accounts/register.html'
@@ -62,8 +68,7 @@ class UserLogout(views.LogoutView):
 		return super().get(request, *args, **kwargs)
 
 
-# Password Change
-class psschng(message, views.PasswordChangeView):
+class PasswordChange(message, views.PasswordChangeView):
 	template_name = 'accounts/password_change_form.html'
 	success_url = reverse_lazy('core:home')
 	success_message = 'your password changed successfully.'
