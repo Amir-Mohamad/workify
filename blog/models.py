@@ -39,4 +39,5 @@ class Article(models.Model):
 
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
-    
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ulike')
+
