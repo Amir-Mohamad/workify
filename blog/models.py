@@ -1,14 +1,14 @@
 from django.db import models
-from django.contrib.auth.models import User
+from accounts.models import User
 
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
     is_active = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ('-created')
+        ordering = ('-created',)
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
 
@@ -24,11 +24,11 @@ class Article(models.Model):
     description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    is_acitve = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
     promote = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ('-created')
+        ordering = ('-created',)
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
 
