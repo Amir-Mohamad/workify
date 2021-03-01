@@ -20,5 +20,7 @@ class User(AbstractUser):
 	# backend = 'accounts.authentication.EmailBackend'
 
 	def thumbnail(self):
-		return format_html("<img width=40 height=25 style='border-radius: 20px;' src='{}'>".format(self.avatar.url))
+		if self.avatar:
+			return format_html("<img width=40 height=25 style='border-radius: 20px;' src='{}'>".format(self.avatar.url))
+		return "nothing"
 	thumbnail.short_description = "thumbnail"

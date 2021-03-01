@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView
-from django.contrib.auth import views as av # auth views
+from django.contrib.auth import views
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.messages.views import SuccessMessageMixin as sucmsg
+from django.contrib.messages.views import SuccessMessageMixin as message
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from accounts.models import User
@@ -11,7 +11,7 @@ from accounts.forms import RegisterForm, ProfileForm
 # Create your views here.
 
 
-class Profile(LoginRequiredMixin, sucmsg, UpdateView):
+class Profile(LoginRequiredMixin, message, UpdateView):
 	model = User
 	template_name = 'accounts/profile.html'
 	form_class = ProfileForm
@@ -22,7 +22,7 @@ class Profile(LoginRequiredMixin, sucmsg, UpdateView):
 		return User.objects.get(pk=self.request.user.pk)
 
 
-class UserRegister(sucmsg, CreateView):
+class UserRegister(message, CreateView):
 	template_name = 'accounts/register.html'
 	form_class = RegisterForm
 	success_url = reverse_lazy('core:home')
@@ -45,7 +45,7 @@ class UserRegister(sucmsg, CreateView):
 		return valid
 
 
-class UserLogin(sucmsg, av.LoginView):
+class UserLogin(message, views.LoginView):
 	template_name = 'accounts/login.html'
 	success_message = 'login was successfully.'
 
@@ -63,7 +63,7 @@ def UserLogout(request):
 
 
 # Password Change
-class pss1(sucmsg, av.PasswordChangeView):
+class psschng(message, views.PasswordChangeView):
 	template_name = 'accounts/password_change_form.html'
 	success_url = reverse_lazy('core:home')
 	success_message = 'your password changed successfully.'

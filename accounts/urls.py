@@ -8,7 +8,7 @@ urlpatterns = [
 	path('register/', views.UserRegister.as_view(), name='register'),
 	path('login/', views.UserLogin.as_view(), name='login'),
 	path('logout/', views.UserLogout, name='logout'),
-	path('password_change/', views.pss1.as_view(), name='password_change'),
+	path('password_change/', views.psschng.as_view(), name='password_change'),
 	# path('', include('django.contrib.auth.urls')),
 ]
 
