@@ -20,14 +20,14 @@ class ProfileForm(forms.ModelForm):
 	class Meta:
 		model = User
 		fields = ("email", "first_name", "last_name", "avatar")
-		widgets = {'avatar':forms.FileInput}
+		# widgets = {'avatar':forms.FileInput}
 
 	def clean_avatar(self):
 		picture = self.cleaned_data['avatar']
 		width, height = get_image_dimensions(picture)
 		content_type = picture.content_type.split('/')
 		# im = Image.open(picture)
-		# im = im.size - > picture width, height
+		# im = im.size # - > picture width, height
 		if content_type[0] in settings.CONTENT_TYPES and content_type[1] in settings.VALID_FORMATS:
 			if picture.size > settings.MAX_UPLOAD_SIZE:
 				raise forms.ValidationError('Please keep filesize under 2 MB')
