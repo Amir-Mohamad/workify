@@ -38,3 +38,5 @@ class Article(models.Model):
         return f'{self.author} wrote {self.title} at {self.created}'
 
 class Like(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
+    
