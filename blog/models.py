@@ -21,5 +21,10 @@ class Article(models.Model):
     is_acitve = models.BooleanField(default=True)
     promote = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ('-created')
+        verbose_name = 'Article'
+        verbose_name_plural = 'Articles'
+
     def __str__(self):
         return f'{self.author} wrote {self.title} at {self.created}'
