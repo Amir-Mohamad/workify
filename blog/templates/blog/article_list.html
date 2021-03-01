@@ -1,4 +1,4 @@
-{% for obj in obj_list %}
-    <p> {{obj.title}} </p>
+{% for obj in articles %}
+    <a href="{% url 'blog:article_detail' obj.id obj.slug %}"> {{obj.title}} </a>
     <!-- and ... -->
 {% endfor %}

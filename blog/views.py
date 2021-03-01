@@ -8,6 +8,7 @@ from .models import Article, Category
 class ArticleList(ListView):
     template_name = 'blog/article_list.html'
     queryset = Article.objects.filter(is_active=True)
+    context_object_name = 'articles'
 
 class ArticleDetail(DetailView):
     template_name = 'blog/article_detail.html'
@@ -16,7 +17,7 @@ class ArticleDetail(DetailView):
     def get_queryset(self):
         id = self.kwargs['id']
         slug = self.kwargs['slug']
-        queryset = get_object_or_404(Article.objects.is_active(), id=id, slug=slug)
+        queryset = get_object_or_404(Article.objects.filter(is_active=True), id=id, slug=slug)
         return queryset
 
 class CategoryList(ListView):
@@ -26,7 +27,7 @@ class CategoryList(ListView):
     def get_queryset(self):
         global category
         slug = self.kwargs.get('slug')
-        category = get_object_or_404(Category.objects.is_active(), slug=slug)
+        category = get_object_or_404(Category.objects.filter(is_active=True), slug=slug)
         return category.articles.published()
 
     def get_context_data(self, **kwargs):
