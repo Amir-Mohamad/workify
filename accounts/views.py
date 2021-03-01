@@ -55,11 +55,11 @@ class UserLogin(message, views.LoginView):
 		return super().get(request, *args, **kwargs)
 
 
-@login_required
-def UserLogout(request):
-    logout(request)
-    messages.success(request, 'logout was successfully.')
-    return redirect('core:home')
+class UserLogout(views.LogoutView):
+	def get(self, request, *args, **kwargs):
+		if not request.user.is_authenticated:
+			return redirect('/')
+		return super().get(request, *args, **kwargs)
 
 
 # Password Change
