@@ -34,8 +34,26 @@ class Article(models.Model):
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
 
+    def likes_count(self):
+        return self.apost.count()
+
+    # my own code :
+    # def user_can_like(self):
+    #     can_like = True
+    #     if self.ulike.exists():
+    #         can_like = False
+    #     return can_like
+
+    def user_can_like(self, user):
+        user_like = user.ulike.all()
+        qs = user_like.filter(post=self)
+        if qs.exists():
+            return True
+        return False
+
     def __str__(self):
         return f'{self.author} wrote {self.title} at {self.created}'
+    
 
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
