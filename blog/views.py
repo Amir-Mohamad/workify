@@ -19,6 +19,7 @@ class ArticleDetail(DetailView):
             article = get_object_or_404(Article, id=id, slug=slug)
             return article
 
+
 class CategoryList(ListView):
     paginate_by = 5
     template_name = 'blog/category_list.html'
@@ -33,6 +34,7 @@ class CategoryList(ListView):
         context = super().get_context_data(**kwargs)
         context['category'] = category
         return context
+
 
 class AuthorList(ListView):
     paginate_by = 5
