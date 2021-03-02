@@ -62,11 +62,11 @@ class Comment(models.Model):
 	body = models.TextField(max_length=400)
 	created = models.DateTimeField(auto_now_add=True)
 
-	# def __str__(self):
-	# 	return f'{self.user} - {self.body[:30]}'
+	def __str__(self):
+		return f'{self.user} - {self.body[:30]}'
 
-	# class Meta:
-	# 	ordering = ('-created',)
+	class Meta:
+		ordering = ('-created',)
 
 
 class Like(models.Model):
