@@ -32,6 +32,7 @@ class Article(models.Model):
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
 
+    # Showes count of likes
     def likes_count(self):
         return self.apost.count()
 
