@@ -20,7 +20,7 @@ class ArticleDetail(DetailView):
             article = get_object_or_404(Article, id=id, slug=slug)
             return article
 
-
+# This Will Show posts by Specified Category
 class CategoryList(ListView):
     paginate_by = 5
     template_name = 'blog/category_list.html'
