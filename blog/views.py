@@ -10,6 +10,7 @@ class ArticleList(ListView):
     queryset = Article.objects.filter(is_active=True)
     context_object_name = 'articles'
 
+
 class ArticleDetail(DetailView):
     context_object_name = 'articles'
 
