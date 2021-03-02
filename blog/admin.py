@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Article, Category
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name','is_active')
     list_editable = ('is_active',)
