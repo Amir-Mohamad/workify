@@ -11,6 +11,7 @@ class ArticleList(ListView):
     context_object_name = 'articles'
 
 # Showes more info for each article 
+# NOTE Bug: context object name should change
 class ArticleDetail(DetailView):
     context_object_name = 'articles'
 
