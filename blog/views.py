@@ -36,7 +36,7 @@ class CategoryList(ListView):
         context['category'] = category
         return context
 
-
+# This Will Show the posts owned by a Specified user
 class AuthorList(ListView):
     paginate_by = 5
     template_name = 'blog/author_list.html'
