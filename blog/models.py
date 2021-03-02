@@ -52,7 +52,7 @@ class Article(models.Model):
 
     def __str__(self):
         return f'{self.author} wrote {self.title} at {self.created}'
-    
+
 
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
@@ -60,4 +60,3 @@ class Like(models.Model):
 
     def __str__(self):
         return f'{self.user} likes {self.article}'
-
