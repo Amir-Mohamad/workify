@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 # For adding team members
 class AboutUsModel(models.Model):
     name = models.CharField(max_length=100)
