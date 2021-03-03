@@ -68,6 +68,7 @@ class Comment(models.Model):
 	class Meta:
 		ordering = ('-created',)
 
+# None
 
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
