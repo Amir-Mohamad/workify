@@ -69,7 +69,7 @@ class Comment(models.Model):
 		ordering = ('-created',)
 
 # None
-
+# Neone
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ulike')
