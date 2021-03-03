@@ -68,13 +68,6 @@ class Comment(models.Model):
 	class Meta:
 		ordering = ('-created',)
 
-# None
-# Neone
-# Mpem
-# dadsa
-asd
-
-# ne
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ulike')
