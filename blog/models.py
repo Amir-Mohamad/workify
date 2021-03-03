@@ -71,7 +71,9 @@ class Comment(models.Model):
 # None
 # Neone
 # Mpem
+# dadsa
 
+# ne
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ulike')
