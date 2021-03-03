@@ -16,6 +16,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='articles')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -67,6 +68,7 @@ class Comment(models.Model):
 
 	class Meta:
 		ordering = ('-created',)
+
 
 class Like(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='alike')
