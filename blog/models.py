@@ -72,6 +72,7 @@ class Comment(models.Model):
 # Neone
 # Mpem
 # dadsa
+asd
 
 # ne
 class Like(models.Model):
