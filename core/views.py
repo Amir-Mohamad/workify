@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.generic.base import View
 from django.views.generic.list import ListView
 from .models import AboutUsModel, WorkSamples
+from .forms import NewsLetterForm
+
 
 
 class Home(View):
@@ -10,6 +12,15 @@ class Home(View):
     def get(self, request, *args, **kwargs):
         workSamples = WorkSamples.objects.filter(promote=True)
         context = {'worksamples':workSamples}
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        newsletter = NewsLetterForm(request.POST)
+        if newsletter.is_valid():
+            newsletter.save()
+            return redirect('core:home')
+            messages.success(request, 'You successfully submit your form') # :\
+        context = {'newsletter':newsletter}
         return render(request, self.template_name, context)
 
 class AboutUsList(ListView):
