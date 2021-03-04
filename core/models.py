@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import CharField
 
 
 
@@ -18,3 +19,8 @@ class AboutUsModel(models.Model):
 
     def __str__(self):
         return self.name
+
+class WorkSamples(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=200) # Note => DONT change it to TextField (sth like preview)
+    github = models.CharField(max_length=300) # Github repo
