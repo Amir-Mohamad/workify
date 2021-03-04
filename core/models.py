@@ -37,3 +37,11 @@ class WorkSamples(models.Model):
     def __str__(self):
         return self.title
         
+
+class NewsLetterForm(models.Model):
+    email = models.EmailField(max_length=100)
+    phone = models.IntegerField(max_length=20)
+
+
+    def __str__(self):
+        return f'{self.phone} with {self.phone}'
