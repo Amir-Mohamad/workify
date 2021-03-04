@@ -30,7 +30,7 @@ class WorkSamples(models.Model):
     promote = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ('promote')
+        ordering = ('promote',)
         verbose_name = 'Work Sample'
         verbose_name_plural = 'Work Sample'
 
@@ -48,7 +48,7 @@ class ContactUsModel(models.Model):
 
 class NewsLetterModel(models.Model):
     email = models.EmailField(max_length=100)
-    phone = models.IntegerField(max_length=20)
+    phone = models.IntegerField()
 
 
     def __str__(self):

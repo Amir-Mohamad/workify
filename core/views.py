@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
 from django.views.generic.list import ListView
-from django.views.generic import CreateView
+from django.views.generic import CreateView, FormView
 from .models import AboutUsModel, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm
 
@@ -30,7 +30,7 @@ class AboutUsList(ListView):
     context_object_name = 'members'
 
 class ContactUs(FormView):
-    template_name = 'contact.html'
+    template_name = 'core/contact-us.html'
     form_class = ContactUsForm
     success_url = 'core:home'
 
