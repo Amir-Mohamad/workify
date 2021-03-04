@@ -30,3 +30,7 @@ class WorkSamples(models.Model):
         ordering = ('promote')
         verbose_name = 'Work Sample'
         verbose_name_plural = 'Work Sample'
+
+    def __str__(self):
+        return self.title
+        
