@@ -28,4 +28,5 @@ class WorkSamples(models.Model):
 
     class Meta:
         ordering = ('promote')
-        
+        verbose_name = 'Work Sample'
+        verbose_name_plural = 'Work Sample'
