@@ -30,10 +30,12 @@ class AboutUsList(ListView):
     template_name = 'core/about-us.html'
     context_object_name = 'members'
 
+
 # class ContactUsView(FormView): 
 #     form_class = ContactUsForm 
 #     template_name = "core/contact-us.html"
 #     success_url = reverse_lazy("core:home")
+
 
 def contactusview(request):
     form = ContactUsForm()
@@ -45,4 +47,3 @@ def contactusview(request):
             f.save()
             return redirect('core:home')
     return render(request, 'core/contact-us.html', {'form':form})
-    
