@@ -40,6 +40,8 @@ class WorkSamples(models.Model):
 
 class ContactUsModel(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     description = models.TextField()
 

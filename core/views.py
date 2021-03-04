@@ -1,10 +1,11 @@
 from django.shortcuts import redirect, render
+from django.urls.base import reverse_lazy
 from django.views.generic.base import View
 from django.views.generic.list import ListView
 from django.views.generic import CreateView, FormView
-from .models import AboutUsModel, WorkSamples
+from .models import AboutUsModel, ContactUsModel, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm
-
+from django.urls import reverse
 
 
 class Home(View):
@@ -29,13 +30,18 @@ class AboutUsList(ListView):
     template_name = 'core/about-us.html'
     context_object_name = 'members'
 
-class ContactUs(FormView):
-    template_name = 'core/contact-us.html'
-    form_class = ContactUsForm
-    success_url = 'core:home'
+# class ContactUsView(FormView): 
+#     form_class = ContactUsForm 
+#     template_name = "core/contact-us.html"
+#     success_url = reverse_lazy("core:home")
 
-    def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.save()
-        return super().form_valid(form)
+def contactusview(request):
+    form = ContactUsForm()
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            f = form.save(commit=False)
+            f.user = request.user
+            f.save()
+            return redirect('core:home')
+    return render(request, 'core/contact-us.html', {'form':form})

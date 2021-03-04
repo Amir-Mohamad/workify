@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import AboutUsModel
+from . models import AboutUsModel, ContactUsModel
 
 class AboutUsAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_active')
@@ -7,3 +7,4 @@ class AboutUsAdmin(admin.ModelAdmin):
     list_filter = ('name',)
 
 admin.site.register(AboutUsModel, AboutUsAdmin)
+admin.site.register(ContactUsModel)

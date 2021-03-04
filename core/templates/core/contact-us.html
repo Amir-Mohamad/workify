@@ -3,11 +3,21 @@
 {% block content %}
 
 	<p>contact-us</p>
+	{% if request.user.is_authenticated %}
 	<form method="POST">
 		{% csrf_token %}
-	
-		{{form}}
+		firstname
+		{{form.firstname}}
+		lastname
+		{{form.lastname}}
+		title
+		{{form.title}}
+		description
+		{{form.description}}
 		
 		<button class="btn btn-primary">Submit</button>
 	</form>
+	{% else %}
+	First you should login to see this page
+	{% endif %}
 {% endblock %}

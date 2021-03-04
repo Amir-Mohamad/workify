@@ -7,10 +7,10 @@ from .models import ContactUsModel, NewsLetterModel
 class NewsLetterForm(forms.ModelForm):
     class Meta:
         model = NewsLetterModel
-        fields = '__all__'
+        fields = ('email', 'phone')
 
 
 class ContactUsForm(forms.ModelForm):
     class Meta:
         model = ContactUsModel
-        fields = ('title', 'description')
+        fields = ('firstname', 'lastname', 'title', 'description') 
