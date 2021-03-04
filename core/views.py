@@ -1,8 +1,9 @@
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
 from django.views.generic.list import ListView
+from django.views.generic import CreateView
 from .models import AboutUsModel, WorkSamples
-from .forms import NewsLetterForm
+from .forms import ContactUsForm, NewsLetterForm
 
 
 
@@ -28,3 +29,13 @@ class AboutUsList(ListView):
     template_name = 'core/about-us.html'
     context_object_name = 'members'
 
+class ContactUs(FormView):
+    template_name = 'contact.html'
+    form_class = ContactUsForm
+    success_url = 'core:home'
+
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.save()
+        return super().form_valid(form)
