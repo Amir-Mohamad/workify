@@ -45,3 +45,4 @@ def contactusview(request):
             f.save()
             return redirect('core:home')
     return render(request, 'core/contact-us.html', {'form':form})
+    
