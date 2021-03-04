@@ -38,7 +38,7 @@ class WorkSamples(models.Model):
         return self.title
         
 
-class NewsLetterForm(models.Model):
+class NewsLetterModel(models.Model):
     email = models.EmailField(max_length=100)
     phone = models.IntegerField(max_length=20)
 
