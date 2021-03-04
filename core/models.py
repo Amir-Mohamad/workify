@@ -21,6 +21,9 @@ class AboutUsModel(models.Model):
         return self.name
 
 class WorkSamples(models.Model):
+    """
+        In home page we can just have 6 worksample => So i put promote
+    """
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=200) # Note => DONT change it to TextField (sth like preview)
     github = models.CharField(max_length=300) # Github repo
