@@ -3,9 +3,9 @@ from django.urls.base import reverse_lazy
 from django.views.generic.base import View
 from django.views.generic.list import ListView
 from django.views.generic import FormView
+from django.urls import reverse
 from .models import AboutUsModel, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm
-from django.urls import reverse
 
 
 class Home(View):
