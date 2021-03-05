@@ -5,10 +5,14 @@ from django.conf import settings
 # from PIL import Image
 from accounts.models import User
 
-class RegisterForm(UserCreationForm):
-	class Meta:
-		model = User
-		fields = ('email', 'password1', 'password2')
+class RegisterForm(forms.Form):
+	email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
+	password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+	password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+
+
+class VerifyForm(forms.Form):
+    verifier = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}))
 
 
 class ProfileForm(forms.ModelForm):
@@ -45,6 +49,3 @@ class ProfileForm(forms.ModelForm):
 		# 	raise forms.ValidationError("The image is %i pixel high. It's supposed to be 200px" % height)
 	
 		# return picture
-
-class VerifyForm(forms.Form):
-    verify_code = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Please enter code'}))
