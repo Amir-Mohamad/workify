@@ -21,6 +21,6 @@ class User(AbstractUser):
 
 	def thumbnail(self):
 		if self.avatar:
-			return format_html("<img width=40 height=25 style='border-radius: 20px;' src='{}'>".format(self.avatar.url))
+			return format_html("<img width=40 height=40 style='border-radius: 20px;' src='{}'>".format(self.avatar.url))
 		return "nothing"
 	thumbnail.short_description = "thumbnail"

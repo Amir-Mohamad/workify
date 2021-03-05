@@ -6,6 +6,7 @@ app_name = 'accounts'
 urlpatterns = [
 	path('', views.Profile.as_view(), name='profile'),
 	path('register/', views.UserRegister.as_view(), name='register'),
+	path('verify/', views.VerifyCode.as_view(), name='verify'),
 	path('login/', views.UserLogin.as_view(), name='login'),
 	path('logout/', views.UserLogout.as_view(), name='logout'),
 	path('password_change/', views.PasswordChange.as_view(), name='password_change'),
