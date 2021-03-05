@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="navbar-nav col-12">
         <a class="nav-link active" href="{% url 'core:home' %}">Home</a>
-        <a class="nav-link active" target="_blank" href="{% url 'core:about_us' %}">about us</a>
-        <a class="nav-link active" target="_blank" href="{% url 'core:contact_us' %}">contact us</a>
+        <a class="nav-link active" target="_blank" href="{% url 'core:about_us' %}">About us</a>
+        <a class="nav-link active" target="_blank" href="{% url 'core:contact_us' %}">Contact Us</a>
         <a class="nav-link active" target="_blank" href="{% url 'admin:index' %}">panel</a>
         {% if request.user.is_authenticated %}
             <a class="nav-link active" href="{% url 'accounts:profile' %}">Dashboard</a>
