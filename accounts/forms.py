@@ -45,3 +45,6 @@ class ProfileForm(forms.ModelForm):
 		# 	raise forms.ValidationError("The image is %i pixel high. It's supposed to be 200px" % height)
 	
 		# return picture
+
+class VerifyForm(forms.Form):
+    verify_code = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Please enter code'}))
