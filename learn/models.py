@@ -23,6 +23,7 @@ class Course(models.Model):
 
 class Video(models.Model):
     title = models.CharField(max_length=200)
+    description = models.TextField()
     youtube = models.CharField(max_length=500)
     aparat = models.CharField(max_length=500)
 
