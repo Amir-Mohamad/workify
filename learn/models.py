@@ -6,10 +6,12 @@ class Course(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
+    
     short_description = models.CharField(max_length=500)
     description = models.TextField()
     cover = models.ImageField()
-    video = models.FileField() # I DONT KNOW 
+    youtube = models.CharField(max_length=500) # Youtube
+    aparat = models.CharField(max_length=500) # Aparat
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     price = models.IntegerField() # I dont now the parameters
