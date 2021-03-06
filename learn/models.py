@@ -8,8 +8,10 @@ class Course(models.Model):
     short_description = models.CharField(max_length=500)
     description = models.TextField()
     video = models.FileField() # I DONT KNOW 
+    created = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     is_special = models.BooleanField(default=True)
+
 
     def __str__(self):
         return self.title
