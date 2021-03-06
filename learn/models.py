@@ -22,5 +22,9 @@ class Course(models.Model):
         return self.title
 
 class Video(models.Model):
+    title = models.CharField(max_length=200)
     youtube = models.CharField(max_length=500)
     aparat = models.CharField(max_length=500)
+
+    def __str__(self):
+        return 
