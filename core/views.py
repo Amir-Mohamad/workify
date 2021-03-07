@@ -2,7 +2,9 @@ from django.shortcuts import redirect, render
 from django.urls.base import reverse_lazy
 from django.views.generic.base import View
 from django.views.generic.list import ListView
-from django.views.generic import FormView
+from django.views.generic import FormView, CreateView
+from django.contrib.messages.views import SuccessMessageMixin as message
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from .models import AboutUsModel, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm
