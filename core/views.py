@@ -50,8 +50,6 @@ class AboutUsList(ListView):
 #             return redirect('core:home')
 #     return render(request, 'core/contact-us.html', {'form':form})
 
-
-
 class ContactUs(LoginRequiredMixin, message, CreateView):
     template_name = 'core/contact-us.html'
     form_class = ContactUsForm
