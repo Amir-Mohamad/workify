@@ -32,44 +32,33 @@ class Profile(LoginRequiredMixin, message, UpdateView):
 		return kwargs
 
 
-class UserRegister(AuthenticatedMixin, message, CreateView):
-	template_name = 'accounts/register.html'
-	form_class = RegisterForm
-	success_url = reverse_lazy('core:home')
-	success_message = 'now, we send you a verify code, enter here.'
-
-	def form_valid(self, form):
-		valid = super().form_valid(form)
+def UserRegister(request):
+	form = RegisterForm(request.POST or None)
+	if form.is_valid():
+		global cd, code
 		cd = form.cleaned_data
-		user = form.save(commit=False)
-		user.set_password(cd['password1'])
-		user.is_active = False
-		user.save()
-		global code, pk
-		pk = user.id
 		code = randint(10100, 30100)
 		subject = 'Verify Code' ; msg = f"you code is {code} for {cd['email']} registration"
 		send_mail(subject, msg, 'info@mega.ir', (cd['email'],))
 		return redirect('accounts:verify')
+	return render(request, 'accounts/register.html', {'form':form})
 
-class VerifyCode(AuthenticatedMixin, FormView):
-	template_name = 'accounts/verify.html'
-	form_class = VerifyForm
-	success_url = reverse_lazy('core:home')
 
-	def form_valid(self, form):
-		valid = super().form_valid(form)
-		cd = form.cleaned_data
-		if code == cd['verify_code']:
-			user = get_object_or_404(User, pk=pk)
-			user.is_active = True
+def VerifyCode(request):
+	form = VerifyForm(request.POST or None)
+	if form.is_valid():
+		verifier = form.cleaned_data.get('verifier')
+		if code == verifier:
+			user = User.objects.create_user(email=cd['email'], password=cd['password1'])
 			user.save()
-			login(self.request, user)
-			messages.success(self.request, 'you are registerd successfully and logged in.', 'success')
-			return redirect(self.success_url)
+			login(request, user)
+			messages.success(request, 'you are registerd successfully and logged in.', 'success')
+			return redirect('core:home')
 		else:
-			messages.error(self.request, 'code is wrong', 'danger')
+			messages.error(request, 'code is wrong', 'danger')
 			return redirect('accounts:verify')
+
+	return render(request, 'accounts/verify.html', {'form':form})
 
 
 class UserLogin(AuthenticatedMixin, message, views.LoginView):

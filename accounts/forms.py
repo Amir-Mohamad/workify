@@ -2,13 +2,39 @@ from django import forms
 from django.core.files.images import get_image_dimensions
 from django.contrib.auth.forms import UserCreationForm
 from django.conf import settings
-# from PIL import Image
+from django.core.validators import EmailValidator
 from accounts.models import User
+# from PIL import Image
 
-class RegisterForm(UserCreationForm):
-	class Meta:
-		model = User
-		fields = ('email', 'password1', 'password2')
+
+class RegisterForm(forms.Form):
+	email = forms.EmailField(
+		widget=forms.EmailInput(attrs={'class':'form-control'}),
+		label='email',
+		validators=[EmailValidator('correct email')],
+	)
+	password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+	password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+
+	def clean_email(self):
+		email = self.cleaned_data.get('email')
+		is_exists = User.objects.filter(email=email).exists()
+		if is_exists:
+			raise forms.ValidationError('Already exists.')
+		return email
+
+	def clean_password2(self):
+		password1 = self.cleaned_data.get('password1')
+		password2 = self.cleaned_data.get('password2')
+		if password1 != password2:
+			raise forms.ValidationError('don\'t match.')
+		if len(password2) < 8:
+		    raise forms.ValidationError('8 chars.')
+		return password2
+
+
+class VerifyForm(forms.Form):
+    verifier = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}))
 
 
 class ProfileForm(forms.ModelForm):
@@ -45,6 +71,3 @@ class ProfileForm(forms.ModelForm):
 		# 	raise forms.ValidationError("The image is %i pixel high. It's supposed to be 200px" % height)
 	
 		# return picture
-
-class VerifyForm(forms.Form):
-    verify_code = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Please enter code'}))
