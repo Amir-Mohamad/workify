@@ -33,11 +33,6 @@ class AboutUsList(ListView):
     context_object_name = 'members'
 
 
-# class ContactUsView(FormView): 
-#     form_class = ContactUsForm 
-#     template_name = "core/contact-us.html"
-#     success_url = reverse_lazy("core:home")
-
 
 # def contactusview(request):
 #     form = ContactUsForm()
