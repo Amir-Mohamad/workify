@@ -27,6 +27,7 @@ class Home(View):
         context = {'newsletter':newsletter}
         return render(request, self.template_name, context)
 
+
 class AboutUsList(ListView):
     queryset = AboutUsModel.objects.filter(is_active=True)
     template_name = 'core/about-us.html'
