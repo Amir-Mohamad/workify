@@ -37,29 +37,28 @@ class AboutUsList(ListView):
 #     success_url = reverse_lazy("core:home")
 
 
-def contactusview(request):
-    form = ContactUsForm()
-    if request.method == 'POST':
-        form = ContactUsForm(request.POST)
-        if form.is_valid():
-            f = form.save(commit=False)
-            f.user = request.user
-            f.save()
-            return redirect('core:home')
-    return render(request, 'core/contact-us.html', {'form':form})
+# def contactusview(request):
+#     form = ContactUsForm()
+#     if request.method == 'POST':
+#         form = ContactUsForm(request.POST)
+#         if form.is_valid():
+#             f = form.save(commit=False)
+#             f.user = request.user
+#             f.save()
+#             return redirect('core:home')
+#     return render(request, 'core/contact-us.html', {'form':form})
 
 
-# emad ..
 
-# class ContactUs(LoginRequiredMixin, message, CreateView):
-#     template_name = 'core/contact-us.html'
-#     form_class = ContactUsForm
-#     success_url = reverse_lazy('core:home')
-#     success_message = 'form saved.'
+class ContactUs(LoginRequiredMixin, message, CreateView):
+    template_name = 'core/contact-us.html'
+    form_class = ContactUsForm
+    success_url = reverse_lazy('core:home')
+    success_message = 'form saved.'
 
-#     def form_valid(self, form):
-#         cd = form.cleaned_data
-#         f = form.save(commit=False)
-#         f.user = self.request.user
-#         f.save()
-#         return super().form_valid(form)
+    def form_valid(self, form):
+        cd = form.cleaned_data
+        f = form.save(commit=False)
+        f.user = self.request.user
+        f.save()
+        return super().form_valid(form)
