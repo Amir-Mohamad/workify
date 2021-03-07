@@ -17,13 +17,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
     # Local Apps
     'accounts.apps.AccountsConfig',
     'blog.apps.BlogConfig',
     'core.apps.CoreConfig',
     # 'learn.apps.LearnConfig',
 
-    
     # Third-Party Apps
     'crispy_forms',
 ]
