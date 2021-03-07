@@ -33,7 +33,6 @@ class AboutUsList(ListView):
     context_object_name = 'members'
 
 
-
 # def contactusview(request):
 #     form = ContactUsForm()
 #     if request.method == 'POST':
