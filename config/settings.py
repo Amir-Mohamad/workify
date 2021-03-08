@@ -128,3 +128,6 @@ MAX_UPLOAD_SIZE = 2097152 # 2 MB (2000000)
 VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Arvan Cloud or Araz Cloud 
