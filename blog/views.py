@@ -5,7 +5,7 @@ from accounts.models import User
 from .models import Article, Category
 
 
-# Showes List of articles with active filter
+#Showes List of articles with active filter
 class ArticleList(ListView):
     template_name = 'blog/article_list.html'
     queryset = Article.objects.filter(is_active=True)
