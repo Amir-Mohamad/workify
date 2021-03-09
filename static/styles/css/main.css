@@ -719,7 +719,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/images/backgrounds/login-bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/static/images/backgrounds/login-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -804,7 +804,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/images/backgrounds/contact-bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/static/images/backgrounds/contact-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
