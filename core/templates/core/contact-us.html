@@ -21,3 +21,58 @@
 	First you should login to see this page
 	{% endif %}
 {% endblock %}
+    <div class="contact-bg">
+      <div class="contact-wrapper">
+        <section class="contact-card">
+          <header class="contact-header">
+            <h1>ارتباط با ما</h1>
+          </header>
+          <form id="contact-form">
+            <div class="basic-info__wrapper">
+              <div id="fullname-control" class="form-control">
+                <label for="fullname">نام و نام خانوادگی</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="نام و نام خانوادگی خود را وارد کنید"
+                  data-error="نام و نام خانوادگی خود را وارد کنید"
+                />
+              </div>
+              <div id="email-control" class="form-control">
+                <label for="email">ایمیل</label>
+                <div style="position: relative">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="ایمیل خود را وارد کنید"
+                    data-error="ایمیل خود را وارد کنید"
+                  />
+                </div>
+              </div>
+            </div>
+            <div id="message-control" class="form-control">
+              <label for="message">پیام شما</label>
+              <div style="position: relative">
+                <textarea
+                  id="message"
+                  type="textarea"
+                  name=""
+                  cols="30"
+                  rows="10"
+                  placeholder="پیام خود را وارد کنید"
+                  data-error="پیام خود را وارد کنید"
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">
+              ارسال پیام
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>

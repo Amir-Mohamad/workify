@@ -1,434 +1,192 @@
-﻿{% load static %}
-<!DOCTYPE html>
-<html lang="fa-IR" dir="rtl">
-  <head>
-    <title>صفحه اصلی - مگاکدرز</title>
-    <!-- Meta Tags -->
-    <meta
-      name="description"
-      content="تیم طراحی سایت مگاکدرز آماده خدمت به تمامی مشتریان عزیز است! خدمات ما: طراحی سایت، توسعه سایت و گرافیک | برنامه های تحت ویندوز | اپلیکیشن موبایل و ..."
-    />
-    <meta
-      name="keywords"
-      content="طراحی سایت، توسعه سایت، گرافیک، برنامه های تحت ویندوز، اپلیکیشن موبایل"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <!-- Links -->
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
-    <link rel="stylesheet" href="{% static 'styles/css/bootstrap-grid.rtl.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'styles/css/main.css' %}" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header id="main-header">
-      <div class="header-desktop container">
-        <a class="main-header__logo" href="#">مگاکدرز</a>
-        <nav class="main-nav">
-          <ul class="d-flex align-items-center">
-            <li><a href="#">خدمات ما</a></li>
-            <li><a href="#">نمونه کارها</a></li>
-            <li><a href="#">سفارش</a></li>
-            <li><a href="#">وبلاگ</a></li>
-            <li>
-              <a href="pages/auth/login.html" class="btn btn-light">
-                ورود یا عضویت
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header-fixed">
-        <div class="container">
-          <a class="main-header__logo" href="#">مگاکدرز</a>
-          <nav class="main-nav">
-            <ul class="d-flex align-items-center">
-              <li><a href="#">خدمات ما</a></li>
-              <li><a href="#">نمونه کارها</a></li>
-              <li><a href="#">سفارش</a></li>
-              <li><a href="#">وبلاگ</a></li>
-              <li>
-                <a href="/pages/auth/login.html" class="btn btn-secondary">
-                  ورود یا عضویت
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="header-mobile">
-        <div class="header-mobile__top d-flex flex-row">
-          <button id="menu-button" type="button">
-            <!--hamburger icon-->
-            <svg
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-            <!--hamburger icon end-->
-            <!--close icon-->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"
-              ></path>
-            </svg>
-            <!--close icon end-->
-          </button>
-          <div class="header-mobile__logo">
-            <a href="#">مگاکدرز</a>
-          </div>
-        </div>
-        <nav class="main-nav d-flex justify-content-center">
-          <ul class="header-mobile__menu">
-            <li><a href="#">خدمات ما</a></li>
-            <li><a href="#">نمونه کارها</a></li>
-            <li><a href="#">سفارش</a></li>
-            <li><a href="#">وبلاگ</a></li>
-            <li><a href="#" class="btn btn-light">ورود یا عضویت</a></li>
-          </ul>
-        </nav>
-        <div class="header-mobile__hidden">None</div>
-      </div>
+﻿<!-- Navbar -->
+
+<!-- Navbar end -->
+
+<!-- Hero -->
+<section id="hero" class="container">
+  <div class="hero__content">
+    <h2 class="hero__content--title">آماده برای فردا</h2>
+    <p class="hero__content--text">
+      مگا کدرز امروزی برای مشکلات قدیمی دریافت، انتقال و مدیریت پول است. با
+      ابزارهایی مانند درگاه پرداخت اینترنتی ، فرم پرداخت و دریافت خودکار حق
+      اشتراک که به دقت برای نیازهای شما ساخته شده‌اند.
+    </p>
+    <div class="hero__content--buttons">
+      <a href="#" class="btn btn-primary">شروع کنید</a>
+      <a href="#" class="btn btn-secondary">ابزار‌ها و امکانات</a>
+    </div>
+  </div>
+  <div class="hero__illustration">
+    <div class="hero__illustration-image"></div>
+  </div>
+</section>
+<!-- Hero end -->
+
+<!-- Steps -->
+<section id="steps" class="container">
+  <article class="step">
+    <div class="step__image">
+      <img src="{% static 'images/illustrations/branding.svg' %}" alt="Branding" />
+    </div>
+    <div class="step__content">
+      <span>01</span>
+      <h2>استراتژی برندینگ</h2>
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+        ستون و سطرآنچنان که لازم است.
+      </p>
+      <button type="button" class="btn btn-primary">بیشتر بدانید</button>
+    </div>
+  </article>
+  <article class="step">
+    <div class="step__image">
+      <img src="{% static 'images/illustrations/design.svg' %}" alt="Design" />
+    </div>
+    <div class="step__content">
+      <span>02</span>
+      <h2>طراحی رابط کاربری</h2>
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+        ستون و سطرآنچنان که لازم است.
+      </p>
+      <button type="button" class="btn btn-primary">بیشتر بدانید</button>
+    </div>
+  </article>
+  <article class="step">
+    <div class="step__image">
+      <img src="{% static 'images/illustrations/programming.svg' %}" alt="Programming" />
+    </div>
+    <div class="step__content">
+      <span>03</span>
+      <h2>برنامه نویسی و توسعه</h2>
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+        ستون و سطرآنچنان که لازم است.
+      </p>
+      <button type="button" class="btn btn-primary">بیشتر بدانید</button>
+    </div>
+  </article>
+  <article class="step">
+    <div class="step__image">
+      <img src="{% static 'images/illustrations/seo.svg' %}" alt="SEO" />
+    </div>
+    <div class="step__content">
+      <span>04</span>
+      <h2>بهینه‌سازی برای موتور‌های جستجو</h2>
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+        استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+        ستون و سطرآنچنان که لازم است.
+      </p>
+      <button type="button" class="btn btn-primary">بیشتر بدانید</button>
+    </div>
+  </article>
+</section>
+<!-- Steps end -->
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <header class="service-header">
+      <h2>خدمات ما</h2>
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
     </header>
-    <!-- Navbar end -->
-
-    <!-- Hero -->
-    <section id="hero" class="container">
-      <div class="hero__content">
-        <h2 class="hero__content--title">آماده برای فردا</h2>
-        <p class="hero__content--text">
-          مگا کدرز امروزی برای مشکلات قدیمی دریافت، انتقال و مدیریت پول است. با
-          ابزارهایی مانند درگاه پرداخت اینترنتی ، فرم پرداخت و دریافت خودکار حق
-          اشتراک که به دقت برای نیازهای شما ساخته شده‌اند.
+    <div class="service-wrapper">
+      <div class="service">
+        <img src="{% static 'images/icons/web-design.svg' %}" alt="Web Design" />
+        <h3>طراحی رابط‌کاربری</h3>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است
         </p>
-        <div class="hero__content--buttons">
-          <a href="#" class="btn btn-primary">شروع کنید</a>
-          <a href="#" class="btn btn-secondary">ابزار‌ها و امکانات</a>
-        </div>
       </div>
-      <div class="hero__illustration">
-        <div class="hero__illustration-image"></div>
+      <div class="service">
+        <img src="{% static 'images/icons/web-development.svg' %}" alt="Web Development" />
+        <h3>توسعه و برنامه نویسی</h3>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است
+        </p>
       </div>
-    </section>
-    <!-- Hero end -->
+      <div class="service">
+        <img src="{% static 'images/icons/desktop-app.svg' %}" alt="Desktop App" />
+        <h3>اپلیکیشن‌های دسکتاپ</h3>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است
+        </p>
+      </div>
+      <div class="service">
+        <img src="{% static 'images/icons/mobile-app.svg' %}" alt="Mobile App" />
+        <h3>اپلیکیشن‌های موبایل</h3>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services end -->
 
-    <!-- Steps -->
-    <section id="steps" class="container">
-      <article class="step">
-        <div class="step__image">
-          <img src="{% static 'images/illustrations/branding.svg' %}" alt="Branding" />
-        </div>
-        <div class="step__content">
-          <span>01</span>
-          <h2>استراتژی برندینگ</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است.
-          </p>
-          <button type="button" class="btn btn-primary">بیشتر بدانید</button>
-        </div>
-      </article>
-      <article class="step">
-        <div class="step__image">
-          <img src="{% static 'images/illustrations/design.svg' %}" alt="Design" />
-        </div>
-        <div class="step__content">
-          <span>02</span>
-          <h2>طراحی رابط کاربری</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است.
-          </p>
-          <button type="button" class="btn btn-primary">بیشتر بدانید</button>
-        </div>
-      </article>
-      <article class="step">
-        <div class="step__image">
-          <img src="{% static 'images/illustrations/programming.svg' %}" alt="Programming" />
-        </div>
-        <div class="step__content">
-          <span>03</span>
-          <h2>برنامه نویسی و توسعه</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است.
-          </p>
-          <button type="button" class="btn btn-primary">بیشتر بدانید</button>
-        </div>
-      </article>
-      <article class="step">
-        <div class="step__image">
-          <img src="{% static 'images/illustrations/seo.svg' %}" alt="SEO" />
-        </div>
-        <div class="step__content">
-          <span>04</span>
-          <h2>بهینه‌سازی برای موتور‌های جستجو</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است.
-          </p>
-          <button type="button" class="btn btn-primary">بیشتر بدانید</button>
-        </div>
-      </article>
-    </section>
-    <!-- Steps end -->
+<!-- Portfolio -->
+<section id="portfolio" class="container">
+  <header class="portfolio-header">
+    <h2>نمونه کارها</h2>
+    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
+  </header>
+  <div class="portfolio-wrapper">
+    <div class="portfolio">
+      <img src="{% static 'images/portfolio/homework-planner.png' %}" alt="" />
+      <a href="#">
+        <h3>دیجی کالا</h3>
+        <p>فروشگاه اینترنتی</p>
+      </a>
+    </div>
+    <div class="portfolio">
+      <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
+      <a href="#">
+        <h3>آپارات</h3>
+        <p>سرویس اشتراک ویدیو</p>
+      </a>
+    </div>
+    <div class="portfolio">
+      <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
+      <a href="#">
+        <h3>بلاگفا</h3>
+        <p>وبلاگ ساز</p>
+      </a>
+    </div>
+    <div class="portfolio">
+      <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
+      <a href="#">
+        <h3>آپارات</h3>
+        <p>سرویس اشتراک ویدیو</p>
+      </a>
+    </div>
+    <div class="portfolio">
+      <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
+      <a href="#">
+        <h3>بلاگفا</h3>
+        <p>وبلاگ ساز</p>
+      </a>
+    </div>
+    <div class="portfolio">
+      <img src="{% static '/images/portfolio/homework-planner.png' %}" alt="" />
+      <a href="#">
+        <h3>دیجی کالا</h3>
+        <p>فروشگاه اینترنتی</p>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Portfolio end -->
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <header class="service-header">
-          <h2>خدمات ما</h2>
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
-        </header>
-        <div class="service-wrapper">
-          <div class="service">
-            <img src="{% static 'images/icons/web-design.svg' %}" alt="Web Design" />
-            <h3>طراحی رابط‌کاربری</h3>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است
-            </p>
-          </div>
-          <div class="service">
-            <img
-              src="{% static 'images/icons/web-development.svg' %}"
-              alt="Web Development"
-            />
-            <h3>توسعه و برنامه نویسی</h3>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است
-            </p>
-          </div>
-          <div class="service">
-            <img src="{% static 'images/icons/desktop-app.svg' %}" alt="Desktop App" />
-            <h3>اپلیکیشن‌های دسکتاپ</h3>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است
-            </p>
-          </div>
-          <div class="service">
-            <img src="{% static 'images/icons/mobile-app.svg' %}" alt="Mobile App" />
-            <h3>اپلیکیشن‌های موبایل</h3>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services end -->
+<!-- Footer -->
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="container">
-      <header class="portfolio-header">
-        <h2>نمونه کارها</h2>
-        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
-      </header>
-      <div class="portfolio-wrapper">
-        <div class="portfolio">
-          <img src="{% static 'images/portfolio/homework-planner.png' %}" alt="" />
-          <a href="#">
-            <h3>دیجی کالا</h3>
-            <p>فروشگاه اینترنتی</p>
-          </a>
-        </div>
-        <div class="portfolio">
-          <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
-          <a href="#">
-            <h3>آپارات</h3>
-            <p>سرویس اشتراک ویدیو</p>
-          </a>
-        </div>
-        <div class="portfolio">
-          <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
-          <a href="#">
-            <h3>بلاگفا</h3>
-            <p>وبلاگ ساز</p>
-          </a>
-        </div>
-        <div class="portfolio">
-          <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
-          <a href="#">
-            <h3>آپارات</h3>
-            <p>سرویس اشتراک ویدیو</p>
-          </a>
-        </div>
-        <div class="portfolio">
-          <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
-          <a href="#">
-            <h3>بلاگفا</h3>
-            <p>وبلاگ ساز</p>
-          </a>
-        </div>
-        <div class="portfolio">
-          <img src="{% static '/images/portfolio/homework-planner.png' %}" alt="" />
-          <a href="#">
-            <h3>دیجی کالا</h3>
-            <p>فروشگاه اینترنتی</p>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Portfolio end -->
+<!-- Footer end -->
 
-    <!-- Footer -->
-    <footer id="main-footer">
-      <div>
-        <div class="container">
-          <div class="row p-2 p-md-0 top-footer">
-            <div class="about-us col-12 col-lg-4">
-              <h3>درباره مگاکدرز</h3>
-              <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است
-              </p>
-            </div>
-            <div class="site-sections col-12 col-md-6 col-lg-4">
-              <h3>بخش های سایت</h3>
-              <ul class="d-sm-flex d-md-inline-block">
-                <li class="mx-sm-2"><a href="#">وبلاگ</a></li>
-                <li class="mx-sm-2"><a href="#">نمونه کارها</a></li>
-                <li class="mx-sm-2">
-                  <a href="/pages/team/about.html">درباره ما</a>
-                </li>
-                <li class="mx-sm-2">
-                  <a href="/pages/team/contact.html">ارتباط با ما</a>
-                </li>
-              </ul>
-            </div>
-            <div class="contatc-us col-12 col-md-6 col-lg-4">
-              <h3>ارتباط با ما</h3>
-              <p>
-                شما میتوانید با استفاده از یکی از راه‌های زیر با ما ارتباط
-                برقرار کنید
-              </p>
-              <ul>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M20,4H4C2.896,4,2,4.896,2,6v12c0,1.104,0.896,2,2,2h16c1.104,0,2-0.896,2-2V6C22,4.896,21.104,4,20,4z M20,8.7l-8,5.334 L4,8.7V6.297l8,5.333l8-5.333V8.7z"
-                    ></path>
-                  </svg>
-                  <span>ایمیل: </span>
-                  <a href="mailto:support@megacoders.ir">
-                    support@megacoders.ir
-                  </a>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M20.487,17.14l-4.065-3.696c-0.399-0.363-1.015-0.344-1.391,0.043l-2.393,2.461c-0.576-0.11-1.734-0.471-2.926-1.66 c-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394c0.388-0.376,0.406-0.991,0.043-1.391L6.859,3.513 c-0.363-0.401-0.98-0.439-1.391-0.087l-2.17,1.861C3.125,5.461,3.022,5.691,3.008,5.936c-0.015,0.25-0.301,6.172,4.291,10.766 C11.305,20.707,16.323,21,17.705,21c0.202,0,0.326-0.006,0.359-0.008c0.245-0.014,0.475-0.117,0.648-0.291l1.86-2.171 C20.926,18.119,20.887,17.503,20.487,17.14z"
-                    ></path>
-                  </svg>
-                  <span>شماره تماس: </span>
-                  <a href="tel:+989123456789">09123456789</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <div class="container">
-          <div class="row mt-md-3 p-2 p-md-0">
-            <div class="col-12 col-md-10 py-1">
-              <p>
-                کليه حقوق محصولات و محتوای اين سایت متعلق به مگاکدرز می باشد و
-                هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت
-                ماست.
-              </p>
-            </div>
-            <div class="col-12 col-md-2 py-1">
-              <ul
-                class="d-flex align-item-center justify-content-start justify-content-md-end"
-              >
-                <li class="px-1">
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="#fff"
-                    >
-                      <path
-                        d="M21.593,7.203c-0.23-0.858-0.905-1.535-1.762-1.766C18.265,5.007,12,5,12,5S5.736,4.993,4.169,5.404 c-0.84,0.229-1.534,0.921-1.766,1.778c-0.413,1.566-0.417,4.814-0.417,4.814s-0.004,3.264,0.406,4.814 c0.23,0.857,0.905,1.534,1.763,1.765c1.582,0.43,7.83,0.437,7.83,0.437s6.265,0.007,7.831-0.403c0.856-0.23,1.534-0.906,1.767-1.763 C21.997,15.281,22,12.034,22,12.034S22.02,8.769,21.593,7.203z M9.996,15.005l0.005-6l5.207,3.005L9.996,15.005z"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
-                <li class="px-1">
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="#fff"
-                    >
-                      <path
-                        d="M20.947,8.305c-0.011-0.757-0.151-1.508-0.419-2.216c-0.469-1.209-1.424-2.165-2.633-2.633 c-0.699-0.263-1.438-0.404-2.186-0.42C14.747,2.993,14.442,2.981,12,2.981s-2.755,0-3.71,0.055 c-0.747,0.016-1.486,0.157-2.185,0.42C4.896,3.924,3.94,4.88,3.472,6.089C3.209,6.788,3.067,7.527,3.053,8.274 c-0.043,0.963-0.056,1.268-0.056,3.71s0,2.754,0.056,3.71c0.015,0.748,0.156,1.486,0.419,2.187 c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45c0.963,0.043,1.268,0.056,3.71,0.056s2.755,0,3.71-0.056 c0.747-0.015,1.486-0.156,2.186-0.419c1.209-0.469,2.164-1.425,2.633-2.633c0.263-0.7,0.404-1.438,0.419-2.187 c0.043-0.962,0.056-1.267,0.056-3.71C21.003,9.572,21.003,9.262,20.947,8.305z M11.994,16.602c-2.554,0-4.623-2.069-4.623-4.623 s2.069-4.623,4.623-4.623c2.552,0,4.623,2.069,4.623,4.623S14.546,16.602,11.994,16.602z M16.801,8.263 c-0.597,0-1.078-0.482-1.078-1.078s0.481-1.078,1.078-1.078c0.595,0,1.077,0.482,1.077,1.078S17.396,8.263,16.801,8.263z"
-                      ></path>
-                      <circle cx="11.994" cy="11.979" r="3.003"></circle>
-                    </svg>
-                  </a>
-                </li>
-                <li class="px-1">
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="#fff"
-                    >
-                      <path
-                        d="M20.665,3.717l-17.73,6.837c-1.21,0.486-1.203,1.161-0.222,1.462l4.552,1.42l10.532-6.645 c0.498-0.303,0.953-0.14,0.579,0.192l-8.533,7.701l0,0l0,0H9.841l0.002,0.001l-0.314,4.692c0.46,0,0.663-0.211,0.921-0.46 l2.211-2.15l4.599,3.397c0.848,0.467,1.457,0.227,1.668-0.785l3.019-14.228C22.256,3.912,21.474,3.351,20.665,3.717z"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer end -->
-
-    <!-- Scripts -->
-    <script src="{% static 'scripts/main.js' %}"></script>
-  </body>
-</html>
+<!-- Scripts -->
