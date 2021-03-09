@@ -1,82 +1,69 @@
 {% load static %}
 <header id="main-header">
     <div class="header-desktop container">
-      <a class="main-header__logo" href="#">مگاکدرز</a>
-      <nav class="main-nav">
-        <ul class="d-flex align-items-center">
-          <li><a href="#">خدمات ما</a></li>
-          <li><a href="#">نمونه کارها</a></li>
-          <li><a href="#">سفارش</a></li>
-          <li><a href="#">وبلاگ</a></li>
-          <li>
-            <a href="pages/auth/login.html" class="btn btn-light">
-              ورود یا عضویت
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header-fixed">
-      <div class="container">
         <a class="main-header__logo" href="#">مگاکدرز</a>
         <nav class="main-nav">
-          <ul class="d-flex align-items-center">
-            <li><a href="#">خدمات ما</a></li>
-            <li><a href="#">نمونه کارها</a></li>
-            <li><a href="#">سفارش</a></li>
-            <li><a href="#">وبلاگ</a></li>
-            <li>
-              <a href="/pages/auth/login.html" class="btn btn-secondary">
-                ورود یا عضویت
-              </a>
-            </li>
-          </ul>
+            <ul class="d-flex align-items-center">
+                <li><a href="#">خدمات ما</a></li>
+                <li><a href="#">نمونه کارها</a></li>
+                <li><a href="#">سفارش</a></li>
+                <li><a href="#">وبلاگ</a></li>
+                <li>
+                    <a href="pages/auth/login.html" class="btn btn-light">
+                        ورود یا عضویت
+                    </a>
+                </li>
+            </ul>
         </nav>
-      </div>
+    </div>
+    <div class="header-fixed">
+        <div class="container">
+            <a class="main-header__logo" href="#">مگاکدرز</a>
+            <nav class="main-nav">
+                <ul class="d-flex align-items-center">
+                    <li><a href="#">خدمات ما</a></li>
+                    <li><a href="#">نمونه کارها</a></li>
+                    <li><a href="#">سفارش</a></li>
+                    <li><a href="#">وبلاگ</a></li>
+                    <li>
+                        <a href="/pages/auth/login.html" class="btn btn-secondary">
+                            ورود یا عضویت
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <div class="header-mobile">
-      <div class="header-mobile__top d-flex flex-row">
-        <button id="menu-button" type="button">
-          <!--hamburger icon-->
-          <svg
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-          <!--hamburger icon end-->
-          <!--close icon-->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"
-            ></path>
-          </svg>
-          <!--close icon end-->
-        </button>
-        <div class="header-mobile__logo">
-          <a href="#">مگاکدرز</a>
+        <div class="header-mobile__top d-flex flex-row">
+            <button id="menu-button" type="button">
+                <!--hamburger icon-->
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+                <!--hamburger icon end-->
+                <!--close icon-->
+                <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z">
+                    </path>
+                </svg>
+                <!--close icon end-->
+            </button>
+            <div class="header-mobile__logo">
+                <a href="#">مگاکدرز</a>
+            </div>
         </div>
-      </div>
-      <nav class="main-nav d-flex justify-content-center">
-        <ul class="header-mobile__menu">
-          <li><a href="#">خدمات ما</a></li>
-          <li><a href="#">نمونه کارها</a></li>
-          <li><a href="#">سفارش</a></li>
-          <li><a href="#">وبلاگ</a></li>
-          <li><a href="#" class="btn btn-light">ورود یا عضویت</a></li>
-        </ul>
-      </nav>
-      <div class="header-mobile__hidden">None</div>
+        <nav class="main-nav d-flex justify-content-center">
+            <ul class="header-mobile__menu">
+                <li><a href="#">خدمات ما</a></li>
+                <li><a href="#">نمونه کارها</a></li>
+                <li><a href="#">سفارش</a></li>
+                <li><a href="#">وبلاگ</a></li>
+                <li><a href="#" class="btn btn-light">ورود یا عضویت</a></li>
+            </ul>
+        </nav>
+        <div class="header-mobile__hidden">None</div>
     </div>
-  </header>
+</header>
