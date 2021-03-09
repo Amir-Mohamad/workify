@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿{% load static %}
+<!DOCTYPE html>
 <html lang="fa-IR" dir="rtl">
   <head>
     <title>صفحه اصلی - مگاکدرز</title>
@@ -16,9 +17,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
     <!-- Links -->
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/styles/css/bootstrap-grid.rtl.min.css" />
-    <link rel="stylesheet" href="/styles/css/main.css" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'styles/css/bootstrap-grid.rtl.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/css/main.css' %}" />
   </head>
   <body>
     <!-- Navbar -->
@@ -129,7 +130,7 @@
     <section id="steps" class="container">
       <article class="step">
         <div class="step__image">
-          <img src="/images/illustrations/branding.svg" alt="Branding" />
+          <img src="{% static 'images/illustrations/branding.svg' %}" alt="Branding" />
         </div>
         <div class="step__content">
           <span>01</span>
@@ -144,7 +145,7 @@
       </article>
       <article class="step">
         <div class="step__image">
-          <img src="/images/illustrations/design.svg" alt="Design" />
+          <img src="{% static 'images/illustrations/design.svg' %}" alt="Design" />
         </div>
         <div class="step__content">
           <span>02</span>
@@ -159,7 +160,7 @@
       </article>
       <article class="step">
         <div class="step__image">
-          <img src="/images/illustrations/programming.svg" alt="Programming" />
+          <img src="{% static 'images/illustrations/programming.svg' %}" alt="Programming" />
         </div>
         <div class="step__content">
           <span>03</span>
@@ -174,7 +175,7 @@
       </article>
       <article class="step">
         <div class="step__image">
-          <img src="/images/illustrations/seo.svg" alt="SEO" />
+          <img src="{% static 'images/illustrations/seo.svg' %}" alt="SEO" />
         </div>
         <div class="step__content">
           <span>04</span>
@@ -199,7 +200,7 @@
         </header>
         <div class="service-wrapper">
           <div class="service">
-            <img src="/images/icons/web-design.svg" alt="Web Design" />
+            <img src="{% static 'images/icons/web-design.svg' %}" alt="Web Design" />
             <h3>طراحی رابط‌کاربری</h3>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -208,7 +209,7 @@
           </div>
           <div class="service">
             <img
-              src="/images/icons/web-development.svg"
+              src="{% static 'images/icons/web-development.svg' %}"
               alt="Web Development"
             />
             <h3>توسعه و برنامه نویسی</h3>
@@ -218,7 +219,7 @@
             </p>
           </div>
           <div class="service">
-            <img src="/images/icons/desktop-app.svg" alt="Desktop App" />
+            <img src="{% static 'images/icons/desktop-app.svg' %}" alt="Desktop App" />
             <h3>اپلیکیشن‌های دسکتاپ</h3>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -226,7 +227,7 @@
             </p>
           </div>
           <div class="service">
-            <img src="/images/icons/mobile-app.svg" alt="Mobile App" />
+            <img src="{% static 'images/icons/mobile-app.svg' %}" alt="Mobile App" />
             <h3>اپلیکیشن‌های موبایل</h3>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -246,42 +247,42 @@
       </header>
       <div class="portfolio-wrapper">
         <div class="portfolio">
-          <img src="/images/portfolio/homework-planner.png" alt="" />
+          <img src="{% static 'images/portfolio/homework-planner.png' %}" alt="" />
           <a href="#">
             <h3>دیجی کالا</h3>
             <p>فروشگاه اینترنتی</p>
           </a>
         </div>
         <div class="portfolio">
-          <img src="/images/portfolio/habit.png" alt="" />
+          <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
           <a href="#">
             <h3>آپارات</h3>
             <p>سرویس اشتراک ویدیو</p>
           </a>
         </div>
         <div class="portfolio">
-          <img src="/images/portfolio/lifetime.png" alt="" />
+          <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
           <a href="#">
             <h3>بلاگفا</h3>
             <p>وبلاگ ساز</p>
           </a>
         </div>
         <div class="portfolio">
-          <img src="/images/portfolio/habit.png" alt="" />
+          <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
           <a href="#">
             <h3>آپارات</h3>
             <p>سرویس اشتراک ویدیو</p>
           </a>
         </div>
         <div class="portfolio">
-          <img src="/images/portfolio/lifetime.png" alt="" />
+          <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
           <a href="#">
             <h3>بلاگفا</h3>
             <p>وبلاگ ساز</p>
           </a>
         </div>
         <div class="portfolio">
-          <img src="/images/portfolio/homework-planner.png" alt="" />
+          <img src="{% static '/images/portfolio/homework-planner.png' %}" alt="" />
           <a href="#">
             <h3>دیجی کالا</h3>
             <p>فروشگاه اینترنتی</p>
@@ -428,6 +429,6 @@
     <!-- Footer end -->
 
     <!-- Scripts -->
-    <script src="/scripts/main.js"></script>
+    <script src="{% static 'scripts/main.js' %}"></script>
   </body>
 </html>
