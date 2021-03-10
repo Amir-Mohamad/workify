@@ -9,9 +9,15 @@
                 <li><a href="{% url 'core:order' %}">سفارش</a></li>
                 <!-- <li><a href="#">وبلاگ</a></li> -->
                 <li>
-                    <a href="{% url 'accounts:login' %}" class="btn btn-light">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">
+                        پروفایل
+                    </a>
+                    {% else %}
+                    <a href="{% url 'accounts:login' %}" class="btn btn-secondary">
                         ورود یا عضویت
                     </a>
+                    {% endif %}
                 </li>
             </ul>
         </nav>
@@ -26,9 +32,16 @@
                     <li><a href="{% url 'core:order' %}">سفارش</a></li>
                     <!-- <li><a href="#">وبلاگ</a></li> -->
                     <li>
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">
+                            پروفایل
+                        </a>
+                        {% else %}
                         <a href="{% url 'accounts:login' %}" class="btn btn-secondary">
                             ورود یا عضویت
                         </a>
+                        {% endif %}
+
                     </li>
                 </ul>
             </nav>
@@ -61,7 +74,17 @@
                 <li><a href="{% url 'core:work_sample' %}">نمونه کارها</a></li>
                 <li><a href="{% url 'core:order' %}">سفارش</a></li>
                 <!-- <li><a href="#">وبلاگ</a></li> -->
-                <li><a href="{% url 'accounts:login' %}" class="btn btn-light">ورود یا عضویت</a></li>
+                <li>
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">
+                        پروفایل
+                    </a>
+                    {% else %}
+                    <a href="{% url 'accounts:login' %}" class="btn btn-secondary">
+                        ورود یا عضویت
+                    </a>
+                    {% endif %}
+                </li>
             </ul>
         </nav>
         <div class="header-mobile__hidden">None</div>
