@@ -12,3 +12,14 @@ class UserRegisterTest(TestCase):
         response = self.client.get(reverse('accounts:register'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'accounts/register.html')
+    
+    # NOTE: I remove this func becuase we have 2 setep authentication !! (next page will be /verify)
+    # def test_user_register_POST_valid(self):
+    #     response = self.client.post(reverse('accounts:register'), data={
+    #         'email':'kevin@gmail.com',
+    #         'password1':'kevinpass',
+    #         'password2':'kevinpass'
+    #     })
+    #     print(response)
+    #     self.assertEqual(response.status_code, 302)
+    #     self.assertEqual(User.objects.count(), 1)
