@@ -1,26 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<p>contact-us</p>
-{% if request.user.is_authenticated %}
-<form method="POST">
-	{% csrf_token %}
-	firstname
-	{{form.firstname}}
-	lastname
-	{{form.lastname}}
-	title
-	{{form.title}}
-	description
-	{{form.description}}
-
-	<button class="btn btn-primary">Submit</button>
-</form>
-{% else %}
-First you should login to see this page
-{% endif %}
-{% endblock %}
 <div class="contact-bg">
 	<div class="contact-wrapper">
 		<section class="contact-card">
@@ -56,9 +36,4 @@ First you should login to see this page
 		</section>
 	</div>
 </div>
-
-<!-- Scripts -->
-<script src="/scripts/main.js"></script>
-</body>
-
-</html>
+{% endblock %}
