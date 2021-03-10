@@ -26,8 +26,10 @@ class WorkSamples(models.Model):
     """
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=200) # Note => DONT change it to TextField (sth like preview)
-    github = models.CharField(max_length=300) # Github repo
+    cover = models.ImageField()
+    github = models.CharField(max_length=300, null=True, blank=True) # Github repo
     promote = models.BooleanField(default=False)
+    is_production = models.BooleanField(default=False)
 
     class Meta:
         ordering = ('promote',)

@@ -5,47 +5,14 @@
         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
     </header>
     <div class="portfolio-wrapper">
+        {% for worksample in worksamples %}
         <div class="portfolio">
-            <img src="{% static 'images/portfolio/homework-planner.png' %}" alt="" />
-            <a href="#">
-                <h3>دیجی کالا</h3>
-                <p>فروشگاه اینترنتی</p>
+            <img src="{{ worksample.cover.urls }}" alt="" />
+            <a href="{{ worksample.github }}">
+                <h3>{{ worksample.title }}</h3>
+                <p>{{ worksample.description }}</p>
             </a>
         </div>
-        <div class="portfolio">
-            <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
-            <a href="#">
-                <h3>آپارات</h3>
-                <p>سرویس اشتراک ویدیو</p>
-            </a>
-        </div>
-        <div class="portfolio">
-            <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
-            <a href="#">
-                <h3>بلاگفا</h3>
-                <p>وبلاگ ساز</p>
-            </a>
-        </div>
-        <div class="portfolio">
-            <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
-            <a href="#">
-                <h3>آپارات</h3>
-                <p>سرویس اشتراک ویدیو</p>
-            </a>
-        </div>
-        <div class="portfolio">
-            <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
-            <a href="#">
-                <h3>بلاگفا</h3>
-                <p>وبلاگ ساز</p>
-            </a>
-        </div>
-        <div class="portfolio">
-            <img src="{% static '/images/portfolio/homework-planner.png' %}" alt="" />
-            <a href="#">
-                <h3>دیجی کالا</h3>
-                <p>فروشگاه اینترنتی</p>
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </section>
