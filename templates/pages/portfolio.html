@@ -7,12 +7,13 @@
     <div class="portfolio-wrapper">
         {% for worksample in worksamples %}
         <div class="portfolio">
-            <img src="{{ worksample.cover.urls }}" alt="" />
+            <img src="{{ worksample.cover.url }}" alt="" />
             <a href="{{ worksample.github }}">
                 <h3>{{ worksample.title }}</h3>
                 <p>{{ worksample.description }}</p>
             </a>
         </div>
         {% endfor %}
+        <!--TODO: WE SHOULD ADD BUTTON "GITHUB" AND PRODUCTION BAGE - and more worksamples btn-->
     </div>
 </section>

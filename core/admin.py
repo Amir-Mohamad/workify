@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import AboutUsModel, ContactUsModel
+from . models import AboutUsModel, ContactUsModel, WorkSamples
 
 
 class AboutUsAdmin(admin.ModelAdmin):
@@ -10,3 +10,4 @@ class AboutUsAdmin(admin.ModelAdmin):
 
 admin.site.register(AboutUsModel, AboutUsAdmin)
 admin.site.register(ContactUsModel)
+admin.site.register(WorkSamples)
