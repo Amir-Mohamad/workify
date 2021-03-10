@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from django.urls.base import reverse_lazy
-from django.views.generic.base import View
+from django.views.generic.base import TemplateView, View
 from django.views.generic.list import ListView
 from django.views.generic import FormView, CreateView
 from django.contrib.messages.views import SuccessMessageMixin as message
@@ -58,3 +58,7 @@ class ContactUs(LoginRequiredMixin, message, CreateView):
         f.user = self.request.user
         f.save()
         return super().form_valid(form)
+
+class OrderView(TemplateView):
+    template_name = 'core/order.html'
+    
