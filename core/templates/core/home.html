@@ -2,9 +2,6 @@
 {% load static %}
 
 {% block content %}
-<!-- Navbar -->
-
-<!-- Navbar end -->
 
 <!-- Hero -->
 {% include 'pages/hero.html' %}
@@ -19,55 +16,7 @@
 <!-- Services end -->
 
 <!-- Portfolio -->
-<section id="portfolio" class="container">
-  <header class="portfolio-header">
-    <h2>نمونه کارها</h2>
-    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
-  </header>
-  <div class="portfolio-wrapper">
-    <div class="portfolio">
-      <img src="{% static 'images/portfolio/homework-planner.png' %}" alt="" />
-      <a href="#">
-        <h3>دیجی کالا</h3>
-        <p>فروشگاه اینترنتی</p>
-      </a>
-    </div>
-    <div class="portfolio">
-      <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
-      <a href="#">
-        <h3>آپارات</h3>
-        <p>سرویس اشتراک ویدیو</p>
-      </a>
-    </div>
-    <div class="portfolio">
-      <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
-      <a href="#">
-        <h3>بلاگفا</h3>
-        <p>وبلاگ ساز</p>
-      </a>
-    </div>
-    <div class="portfolio">
-      <img src="{% static 'images/portfolio/habit.png' %}" alt="" />
-      <a href="#">
-        <h3>آپارات</h3>
-        <p>سرویس اشتراک ویدیو</p>
-      </a>
-    </div>
-    <div class="portfolio">
-      <img src="{% static 'images/portfolio/lifetime.png' %}" alt="" />
-      <a href="#">
-        <h3>بلاگفا</h3>
-        <p>وبلاگ ساز</p>
-      </a>
-    </div>
-    <div class="portfolio">
-      <img src="{% static '/images/portfolio/homework-planner.png' %}" alt="" />
-      <a href="#">
-        <h3>دیجی کالا</h3>
-        <p>فروشگاه اینترنتی</p>
-      </a>
-    </div>
-  </div>
-</section>
+{% include 'pages/portfolio.html' %}
+<!-- Portfolio end-->
 
 {% endblock content %}
