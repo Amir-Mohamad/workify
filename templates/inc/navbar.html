@@ -9,6 +9,7 @@
                 <li><a href="{% url 'core:order' %}">سفارش</a></li>
                 <!-- <li><a href="#">وبلاگ</a></li> -->
                 <li>
+                    <!--Check if user if authenticated or not (Show Profile or Login Button)-->
                     {% if request.user.is_authenticated %}
                     <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">
                         پروفایل
