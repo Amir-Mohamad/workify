@@ -2,7 +2,6 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
 <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
 
   {{ form.email|as_crispy_field }}
