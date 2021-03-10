@@ -11,7 +11,7 @@
 				<h1>ورود به مگاکدرز</h1>
 				<p>
 					عضو نیستید؟
-					<a href="/pages/auth/signup.html">همین حالا عضو شو!</a>
+					<a href="{% url 'accounts:register' %}">همین حالا عضو شو!</a>
 				</p>
 			</header>
 			<form method="POST" id="login-form" novalidate> {% csrf_token %}

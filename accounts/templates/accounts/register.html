@@ -1,6 +1,6 @@
 {% extends 'accounts/base.html' %}
 {% load static %}
-
+{% load widget_tweaks %}
 
 {% block content %}
 <body>
@@ -8,19 +8,21 @@
 		<section class="signup-card">
 			<header class="signup-header">
 				<h1>ثبت نام در مگاکدرز</h1>
-				<p>عضو هستید؟ <a href="/pages/auth/login.html">وارد شوید!</a></p>
+				<p>عضو هستید؟ <a href="{% url 'accounts:login' %}">وارد شوید!</a></p>
 			</header>
-			<form id="signup-form">
+			<form method="POST" id="signup-form"> {% csrf_token %}
 				<div id="email-control" class="form-control">
 					<label for="email">ایمیل</label>
-					<input type="email" id="email" placeholder="name@example.com"
-						data-error="لطفا ایمیل خود را وارد کنید" />
+					<!-- <input type="email" id="email" placeholder="name@example.com"
+						data-error="لطفا ایمیل خود را وارد کنید" /> -->
+						{{form.email|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 				</div>
 				<div class="form-control">
 					<label for="password">کلمه عبور</label>
 					<div style="position: relative">
-						<input type="password" id="password" placeholder="••••••••"
-							data-error="لطفا کلمه عبور را وارد کنید" />
+						<!-- <input type="password" id="password" placeholder="••••••••"
+							data-error="لطفا کلمه عبور را وارد کنید" /> -->
+							{{form.password1|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفا کلمه عبور را وارد کنید"}}
 						<button type="button" class="password-icon">
 							<svg class="eye-off" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg">
@@ -34,8 +36,9 @@
 				<div class="form-control">
 					<label for="confirm-password">تکرار کلمه عبور</label>
 					<div style="position: relative">
-						<input type="password" id="confirm-password" placeholder="••••••••"
-							data-error="لطفا کلمه عبور را وارد کنید" />
+						<!-- <input type="password" id="confirm-password" placeholder="••••••••"
+							data-error="لطفا کلمه عبور را وارد کنید" /> -->
+							{{form.password2|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفا کلمه عبور را وارد کنید"}}
 						<button type="button" class="confirm-password-icon">
 							<svg class="eye-off" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg">
