@@ -17,8 +17,6 @@
 			<form method="POST" id="login-form" novalidate> {% csrf_token %}
 				<div id="email-control" class="form-control">
 					<label for="email">ایمیل</label>
-					<!-- <input type="email" id="email" placeholder="name@example.com"
-						data-error="لطفا ایمیل خود را وارد کنید" /> -->
 						{{form.username|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 				</div>
 				<div id="password-control" class="form-control">
