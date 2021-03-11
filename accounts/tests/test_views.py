@@ -13,6 +13,7 @@ class UserRegisterTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'accounts/register.html')
     
+    
     # NOTE: I remove this func becuase we have 2 setep authentication !! (next page will be /verify)
     # def test_user_register_POST_valid(self):
     #     response = self.client.post(reverse('accounts:register'), data={
