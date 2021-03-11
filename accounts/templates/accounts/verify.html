@@ -1,11 +1,9 @@
 {% extends 'accounts/base.html' %}
 
 {% block content %}
-
 	<form method="post">
 		{% csrf_token %}
 		{{ form }}<br>
 		<input type="submit" name="" value="register" class="btn btn-success">
 	</form>
-
 {% endblock %}
