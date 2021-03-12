@@ -5,16 +5,17 @@
 
 {% block content %}
 <div class="login-bg">
-	<section class="login-card">
+	<section class="login-card" style="height: 57% !important;">
 		<form method="POST" id="login-form" novalidate> {% csrf_token %}
-			<div id="email-control" class="form-control">
-				<label>کد تایید</label>
+			<div class="form-control">
+				<label for="active-code">کد فعالسازی</label>
 				{{form.verifier}}
 			</div>
 			<button type="submit" class="btn btn-block btn-primary">
 				ثبت نام
 			</button>
-			</footer>
+			<p class="active-text">کد فعالسازی به ایمیل خود را وارد کنید.</p>
+		</form>
 	</section>
 </div>
 
