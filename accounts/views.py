@@ -65,11 +65,10 @@ class UserLogin(AuthenticatedMixin, message, views.LoginView):
 
 
 class UserLogout(views.LogoutView):
-	def get(self, request, *args, **kwargs):
-		if not request.user.is_authenticated:
-			return redirect('/')
-		return super().get(request, *args, **kwargs)
-
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            messages.info(request, "شما با موفقیت خارج شدید")
+        return super().dispatch(request, *args, **kwargs)
 
 class PasswordChange(message, views.PasswordChangeView):
 	template_name = 'accounts/password_change_form.html'
