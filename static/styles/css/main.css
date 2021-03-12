@@ -889,4 +889,12 @@ h2 {
 #order #importance .importance-reasons .card img {
   width: 100%;
 }
+.active-text { 
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #ffefa6;
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  border: 1px solid #f6d233;
+}
 /*# sourceMappingURL=main.css.map */
