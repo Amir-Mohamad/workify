@@ -5,17 +5,17 @@
 
 {% block content %}
 <div class="login-bg">
-		<section class="login-card">
-			<form method="POST" id="login-form" novalidate> {% csrf_token %}
-				<div id="email-control" class="form-control">
-					<label>کد تایید</label>
-						{{form.verifier}}
-				</div>
-				<button type="submit" class="btn btn-block btn-primary">
-					ثبت نام
-				</button>
+	<section class="login-card">
+		<form method="POST" id="login-form" novalidate> {% csrf_token %}
+			<div id="email-control" class="form-control">
+				<label>کد تایید</label>
+				{{form.verifier}}
+			</div>
+			<button type="submit" class="btn btn-block btn-primary">
+				ثبت نام
+			</button>
 			</footer>
-		</section>
+	</section>
 </div>
 
 
