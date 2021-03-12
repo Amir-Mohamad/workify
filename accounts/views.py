@@ -62,7 +62,7 @@ def VerifyCode(request):
 
 class UserLogin(AuthenticatedMixin, message, views.LoginView):
 	template_name = 'accounts/login.html'
-	success_message = 'login was successfully.'
+	success_message = 'ورود با موفقیت انجام شد'
 
 
 class UserLogout(views.LogoutView):
@@ -75,4 +75,4 @@ class UserLogout(views.LogoutView):
 class PasswordChange(message, views.PasswordChangeView):
 	template_name = 'accounts/password_change_form.html'
 	success_url = reverse_lazy('core:home')
-	success_message = 'your password changed successfully.'
+	success_message = 'پسسورد شما با موفقیت عوض شد'

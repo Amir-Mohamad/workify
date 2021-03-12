@@ -4,8 +4,9 @@
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
     <script type="text/javascript">
         Swal.fire(
-            '{{ message }}}',
-            '{{message.tag}}'
+            '{{ message }}',
+            '{{ message.tag }}',
+            'success',
         )
     </script>
     {% endfor %}
