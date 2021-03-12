@@ -14,8 +14,11 @@
                     <a href="{% url 'accounts:profile' %}" class="btn btn-secondary">
                         پروفایل
                     </a>
+                    <a href="{% url 'accounts:logout' %}" class="btn btn-secondary">
+                        خروج
+                    </a>
                     {% else %}
-                    <a href="{% url 'accounts:login' %}" class="btn btn-secondary">
+                    <a href="{% url 'accounts:login' %}" class="btn btn-secondary" id="logout-btn">
                         ورود یا عضویت
                     </a>
                     {% endif %}
