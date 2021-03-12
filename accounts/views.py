@@ -52,10 +52,10 @@ def VerifyCode(request):
 			user = User.objects.create_user(email=cd['email'], password=cd['password1'])
 			user.save()
 			login(request, user)
-			sweetify.success(request, 'شما با موفقیت ثبت نام کردید')
+			sweetify.success(request, 'شما با موفقیت ثبت نام کردید', 'success')
 			return redirect('core:home')
 		else:
-			messages.error(request, 'code is wrong', 'danger')
+			messages.error(request, 'کد وارد شده اشتباه است', 'danger')
 			return redirect('accounts:verify')
 	return render(request, 'accounts/verify.html', {'form':form})
 
