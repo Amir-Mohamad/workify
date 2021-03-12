@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     # Third-Party Apps
     'crispy_forms',
     'widget_tweaks',
-    'sweetify',
 ]
 
 
@@ -132,6 +131,5 @@ VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Sweet Alert packge
-SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
 
 # Arvan Cloud or Araz Cloud 

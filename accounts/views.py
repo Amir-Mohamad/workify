@@ -12,7 +12,6 @@ from django.core.mail import send_mail
 from accounts.mixins import AuthenticatedMixin
 from accounts.models import User
 from accounts.forms import RegisterForm, ProfileForm, VerifyForm
-import sweetify
 # Create your views here.
 
 
@@ -52,10 +51,10 @@ def VerifyCode(request):
 			user = User.objects.create_user(email=cd['email'], password=cd['password1'])
 			user.save()
 			login(request, user)
-			sweetify.success(request, 'شما با موفقیت ثبت نام کردید', 'success')
+			messages.success(request, 'شما با موفقیت ثبت نام کردید')
 			return redirect('core:home')
 		else:
-			messages.error(request, 'کد وارد شده اشتباه است', 'danger')
+			messages.error(request, 'کد وارد شده اشتباه است')
 			return redirect('accounts:verify')
 	return render(request, 'accounts/verify.html', {'form':form})
 
