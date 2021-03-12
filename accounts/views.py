@@ -43,7 +43,6 @@ def UserRegister(request):
 		return redirect('accounts:verify')
 	return render(request, 'accounts/register.html', {'form':form})
 
-
 def VerifyCode(request):
 	form = VerifyForm(request.POST or None)
 	if form.is_valid():
