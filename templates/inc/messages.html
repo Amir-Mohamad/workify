@@ -1,5 +1,8 @@
 {% if messages %}
     {% for message in messages %}
-        <p class="alert alert-{{ message.tags }}">{{ message }}</p>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+        <script>
+            Swal.fire('{{ message }}')
+        </script>
     {% endfor %}
 {% endif %}
