@@ -52,7 +52,7 @@ def VerifyCode(request):
 			user = User.objects.create_user(email=cd['email'], password=cd['password1'])
 			user.save()
 			login(request, user)
-			sweetify.success(request, 'you are registerd successfully and logged in.',  persistent='Hell yeah')
+			sweetify.success(request, 'شما با موفقیت ثبت نام کردید')
 			return redirect('core:home')
 		else:
 			messages.error(request, 'code is wrong', 'danger')
