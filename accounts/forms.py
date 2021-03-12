@@ -34,7 +34,7 @@ class RegisterForm(forms.Form):
 
 
 class VerifyForm(forms.Form):
-    verifier = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}))
+    verifier = forms.IntegerField()
 
 
 class ProfileForm(forms.ModelForm):
