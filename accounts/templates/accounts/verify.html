@@ -5,23 +5,17 @@
 
 {% block content %}
 <div class="login-bg">
-	<div class="login-wrapper">
 		<section class="login-card">
-			<header class="login-header">
-				<h1>ورود به مگاکدرز</h1>
-				<p>
-					عضو نیستید؟
-					<a href="{% url 'accounts:register' %}">همین حالا عضو شو!</a>
-				</p>
-			</header>
 			<form method="POST" id="login-form" novalidate> {% csrf_token %}
 				<div id="email-control" class="form-control">
-					<label for="email">کد تایید</label>
-						{{form|attr:"type:text"|attr:"id:text"|attr:"placeholder:1111"|attr:"data-error:لطفا کد تایید خود را وارد کنید"}}
+					<label>کد تایید</label>
+						{{form.verifier}}
 				</div>
+				<button type="submit" class="btn btn-block btn-primary">
+					ثبت نام
+				</button>
 			</footer>
 		</section>
-	</div>
 </div>
 
 

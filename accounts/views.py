@@ -57,7 +57,6 @@ def VerifyCode(request):
 		else:
 			messages.error(request, 'code is wrong', 'danger')
 			return redirect('accounts:verify')
-
 	return render(request, 'accounts/verify.html', {'form':form})
 
 
