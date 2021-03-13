@@ -1,5 +1,5 @@
 {% extends 'accounts/base.html' %}
-
+{% load widget_tweaks %}
 {% block content %}
 <div class="contact-bg">
 	<div class="contact-wrapper">
@@ -20,7 +20,7 @@
 						<div style="position: relative">
 							<!-- <input type="email" id="email" placeholder="ایمیل خود را وارد کنید"
 								data-error="ایمیل خود را وارد کنید" /> -->
-								{{form.fullname|attr:"type:email"|attr:"id:email"|attr:"placeholder:ایمیل خود را وارد کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
+								{{form.title|attr:"type:text"|attr:"id:text"|attr:"placeholder:ایمیل خود را وارد کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 						</div>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 					<div style="position: relative">
 						<!-- <textarea id="message" type="textarea" name="" cols="30" rows="10"
 							placeholder="پیام خود را وارد کنید" data-error="پیام خود را وارد کنید"></textarea> -->
-							{{form.description|attr:"type:textarea"|attr:"cols:30|attr:"rows:10|attr:"id:message"|attr:"placeholder:پیام خود را وارد کنید"|attr:"data-error:پیام خود را وارد کنید"}}
+							{{form.description|attr:"type:textarea"|attr:"cols:30"|attr:"rows:10"|attr:"id:message"|attr:"placeholder:پیام خود را وارد کنید"|attr:"data-error:پیام خود را وارد کنید"}}
 					</div>
 				</div>
 				<button type="submit" class="btn btn-block btn-primary">
