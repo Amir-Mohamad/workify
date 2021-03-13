@@ -13,4 +13,4 @@ class NewsLetterForm(forms.ModelForm):
 class ContactUsForm(forms.ModelForm):
     class Meta:
         model = ContactUsModel
-        fields = ('firstname', 'lastname', 'title', 'description') 
+        fields = ('fullname', 'title', 'description') 

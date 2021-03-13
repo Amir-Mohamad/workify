@@ -7,7 +7,7 @@
 			<header class="contact-header">
 				<h1>ارتباط با ما</h1>
 			</header>
-			<form id="contact-form">
+			<form method="POST" id="contact-form"> {% csrf_token %}
 				<div class="basic-info__wrapper">
 					<div id="fullname-control" class="form-control">
 						<label for="fullname">نام و نام خانوادگی</label>
@@ -16,7 +16,7 @@
 							{{form.fullname|attr:"type:text"|attr:"id:fullname"|attr:"placeholder:نام و نام خانوادگی خود را وارد کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 					</div>
 					<div id="email-control" class="form-control">
-						<label for="email">ایمیل</label>
+						<label for="email">عنوان</label>
 						<div style="position: relative">
 							<!-- <input type="email" id="email" placeholder="ایمیل خود را وارد کنید"
 								data-error="ایمیل خود را وارد کنید" /> -->

@@ -50,7 +50,7 @@ class ContactUs(LoginRequiredMixin, message, CreateView):
     template_name = 'core/contact-us.html'
     form_class = ContactUsForm
     success_url = reverse_lazy('core:home')
-    success_message = 'form saved.'
+    success_message = 'پیام شما با موفقیت ارسال شد'
 
     def form_valid(self, form):
         cd = form.cleaned_data
