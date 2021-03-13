@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.conf import settings
 from django.core.validators import EmailValidator
 from accounts.models import User
-# from PIL import Image
 
 
 class RegisterForm(forms.Form):

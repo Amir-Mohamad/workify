@@ -1,7 +1,7 @@
 {% load static %}
 <header id="main-header">
     <div class="header-desktop container">
-        <a class="main-header__logo" href="#">مگاکدرز</a>
+        <a class="main-header__logo" href="{% url 'core:home' %}">مگاکدرز</a>
         <nav class="main-nav">
             <ul class="d-flex align-items-center">
                 <li><a href="#">خدمات ما</a></li>
@@ -69,7 +69,7 @@
                 <!--close icon end-->
             </button>
             <div class="header-mobile__logo">
-                <a href="#">مگاکدرز</a>
+                <a href="{% url 'core:home' ">مگاکدرز</a>
             </div>
         </div>
         <nav class="main-nav d-flex justify-content-center">
