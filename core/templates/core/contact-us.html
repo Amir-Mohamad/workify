@@ -13,22 +13,19 @@
 				<div class="basic-info__wrapper">
 					<div id="fullname-control" class="form-control">
 						<label for="fullname">نام و نام خانوادگی</label>
-						{{form.fullname|attr:"type:text"|attr:"id:fullname"|attr:"placeholder:نام و نام خانوادگی خود را
-						وارد کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
+						{{form.fullname|attr:"type:text"|attr:"id:fullname"|attr:"placeholder:نام و نام خانوادگی خود را وارد کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 					</div>
 					<div id="email-control" class="form-control">
 						<label for="email">عنوان</label>
 						<div style="position: relative">
-							{{form.title|attr:"type:text"|attr:"id:text"|attr:"placeholder:ایمیل خود را وارد
-							کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
+							{{form.title|attr:"type:text"|attr:"id:text"|attr:"placeholder:ایمیل خود را وارد کنید"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 						</div>
 					</div>
 				</div>
 				<div id="message-control" class="form-control">
 					<label for="message">پیام شما</label>
 					<div style="position: relative">
-						{{form.description|attr:"type:textarea"|attr:"cols:30"|attr:"rows:10"|attr:"id:message"|attr:"placeholder:پیام
-						خود را وارد کنید"|attr:"data-error:پیام خود را وارد کنید"}}
+						{{form.description|attr:"type:textarea"|attr:"cols:30"|attr:"rows:10"|attr:"id:message"|attr:"placeholder:پیام خود را وارد کنید"|attr:"data-error:پیام خود را وارد کنید"}}
 					</div>
 				</div>
 				<button type="submit" class="btn btn-block btn-primary">
