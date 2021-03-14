@@ -62,8 +62,6 @@ class ProfileForm(forms.ModelForm):
 
 			return picture
 		return
-
-
 		# if width != 200:
 		# 	raise forms.ValidationError("The image is %i pixel wide. It's supposed to be 100px" % width)
 		# if height != 200:
