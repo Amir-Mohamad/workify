@@ -1,3 +1,6 @@
+::placeholder {
+    font-family: "Iran Sans";
+}
 .active-text { 
     margin-top: 1rem;
     padding: 0.7rem;
@@ -5,4 +8,4 @@
     font-size: 0.9rem;
     border-radius: 0.25rem;
     border: 1px solid #f6d233;
-  }
+}

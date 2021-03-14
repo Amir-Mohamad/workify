@@ -8,9 +8,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-::placeholder {
-  font-family: "Iran Sans";
-}
+
 body {
   color: #323231;
   font-family: "Iran Sans", "sans-serif";
