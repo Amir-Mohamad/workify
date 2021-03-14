@@ -57,3 +57,7 @@ class NewsLetterModel(models.Model):
     def __str__(self):
         return f'{self.phone} with {self.phone}'
 
+class OrderModel(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    phone = models.IntegerField()
