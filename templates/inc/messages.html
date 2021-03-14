@@ -1,13 +1,14 @@
 {% if messages %}
-    {% for message in messages %}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
-    <script type="text/javascript">
-        Swal.fire(
-            '{{ message }}',
-            '{{ message.none }}',
-            '{{ message.tags }}',
-        )
-    </script>
-    {% endfor %}
+{% for message in messages %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+<script type="text/javascript">
+    Swal.fire(
+        '{{ message }}',
+        '{{ message.none }}',
+        '{{ message.tags }}',
+    )
+</script>
+{% endfor %}
 {% endif %}
