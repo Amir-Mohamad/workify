@@ -18,14 +18,12 @@
 			<form method="POST" id="login-form" novalidate> {% csrf_token %}
 				<div id="email-control" class="form-control">
 					<label for="email">ایمیل</label>
-					{{form.username|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا
-					ایمیل خود را وارد کنید"}}
+						{{form.username|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 				</div>
 				<div id="password-control" class="form-control">
 					<label for="password">کلمه عبور</label>
 					<div style="position: relative">
-						{{form.password|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفا
-						کلمه عبور را وارد کنید"}}
+							{{form.password|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفا کلمه عبور را وارد کنید"}}
 						<button type="button" class="password-icon">
 							<svg class="eye-off" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 								xmlns="http://www.w3.org/2000/svg">
@@ -42,8 +40,9 @@
 			</form>
 			<div class="divider">یا</div>
 			<footer>
-				<a href="#" id="login-google" class="btn btn-block btn-google" ورود با گوگل <span
-					class="google-icon"></span>
+				<a href="#" id="login-google" class="btn btn-block btn-google">
+					ورود با گوگل
+					<span class="google-icon"></span>
 				</a>
 			</footer>
 		</section>
