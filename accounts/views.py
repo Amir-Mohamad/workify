@@ -14,7 +14,7 @@ from accounts.models import User
 from accounts.forms import RegisterForm, ProfileForm, VerifyForm
 # Create your views here.
 
-
+# Dashboard (Profile). for changing some data.(name, lastname and ...)
 class Profile(LoginRequiredMixin, message, UpdateView):
 	model = User
 	template_name = 'accounts/profile.html'
