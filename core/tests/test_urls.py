@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import resolve, reverse
-from core.views import ContactUs, Home
+from core.views import AboutUsList, ContactUs, Home
 
 
 class TestUrls(SimpleTestCase):
@@ -12,3 +12,7 @@ class TestUrls(SimpleTestCase):
     def test_contact_us_page_(self):
         url = reverse('core:contact_us')
         self.assertEqual(resolve(url).func.view_class, ContactUs)
+
+    def test_about_us_page(self):
+        url = reverse('core:about_us')
+        self.assertEqual(resolve(url).func.view_class, AboutUsList)
