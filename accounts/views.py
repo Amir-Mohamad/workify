@@ -31,7 +31,7 @@ class Profile(LoginRequiredMixin, message, UpdateView):
 		kwargs.update({'file': file})
 		return kwargs
 
-
+# Registering user
 def UserRegister(request):
 	form = RegisterForm(request.POST or None)
 	if form.is_valid():
