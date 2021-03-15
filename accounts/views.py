@@ -12,7 +12,7 @@ from django.core.mail import send_mail
 from accounts.mixins import AuthenticatedMixin
 from accounts.models import User
 from accounts.forms import RegisterForm, ProfileForm, VerifyForm
-# Create your views here.
+
 
 # Dashboard (Profile). for changing some data.(name, lastname and ...)
 class Profile(LoginRequiredMixin, message, UpdateView):
