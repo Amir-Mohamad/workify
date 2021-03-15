@@ -61,10 +61,12 @@ def VerifyCode(request):
 			return redirect('accounts:verify')
 	return render(request, 'accounts/verify.html', {'form':form})
 
+
 # Login user
 class UserLogin(AuthenticatedMixin, message, views.LoginView):
 	template_name = 'accounts/login.html'
 	success_message = 'ورود با موفقیت انجام شد'
+
 
 # Logouting user
 class UserLogout(views.LogoutView):
@@ -72,6 +74,7 @@ class UserLogout(views.LogoutView):
         if request.user.is_authenticated:
             messages.info(request, "شما با موفقیت خارج شدید")
         return super().dispatch(request, *args, **kwargs)
+
 
 # Changing password
 class PasswordChange(message, views.PasswordChangeView):
