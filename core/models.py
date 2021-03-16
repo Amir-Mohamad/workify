@@ -20,6 +20,8 @@ class AboutUsModel(models.Model):
     def __str__(self):
         return self.name
 
+class AboutUsText(models.Model):
+    first_text = models.TextField()
 
 class WorkSamples(models.Model):
     """
