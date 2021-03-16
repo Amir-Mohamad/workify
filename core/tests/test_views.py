@@ -14,4 +14,5 @@ class TestViews(TestCase):
 
     def test_about_us_page_response(self):
         response = self.client.get(reverse('core:about_us'))
+        self.assertEqual(response.status_code, 200)
         
