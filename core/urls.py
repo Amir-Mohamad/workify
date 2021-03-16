@@ -4,7 +4,6 @@ from django.views.generic import TemplateView
 
 
 app_name = "core"
-
 urlpatterns = [
     path('', views.Home.as_view(), name="home"),
     path('team/about-us/', views.AboutUsList.as_view(), name="about_us"),
