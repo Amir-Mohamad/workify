@@ -19,3 +19,4 @@ class TestViews(TestCase):
     def test_contact_us_response(self):
         response = self.client.get(reverse('core:contact_us'))
         self.assertEqual(response.status_code, 302) # will redirect ro login page
+    
