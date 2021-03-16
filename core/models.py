@@ -28,6 +28,7 @@ class AboutUsText(models.Model):
     def __str__(self):
         return self.first_text[:50]
 
+
 class WorkSamples(models.Model):
     """
         In home page we can just have 6 worksample => So i put promote
