@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @font-face {
   font-family: "Iran Sans";
-  src: url("../../fonts/IRANSans.ttf") format("truetype");
+  src: url("/static/fonts/IRANSans.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -83,7 +83,7 @@ main p {
   border: 1px solid #999999;
 }
 .btn.btn-secondary:hover, .btn.btn-secondary:focus {
-  border: 1px solid #666666;
+  border: 1px solid #0c0a0a;
 }
 .btn.btn-light {
   background: #ffffff;
@@ -136,7 +136,7 @@ main p {
 }
 .form-control input:placeholder,
 .form-control textarea:placeholder {
-  color: #666666;
+  color: #0c0a0a;
 }
 .form-control input:focus,
 .form-control textarea:focus {
@@ -157,7 +157,7 @@ main p {
   height: 18px;
   transition: all 0.3s ease;
   cursor: pointer;
-  color: #666666;
+  color: #0c0a0a;
 }
 .form-control button .eye:active,
 .form-control button .eye-off:active {
@@ -293,6 +293,10 @@ h2 {
     width: 30rem !important;
     height: 36rem !important;
     margin: 0 auto 0 auto;
+  }
+
+  .team-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -475,7 +479,7 @@ h2 {
 #main-header .header-mobile__top button svg {
   width: 1.8rem;
   height: 1.8rem;
-  color: #666666;
+  color: #0c0a0a;
 }
 #main-header .header-mobile__top button:hover svg {
   color: #323231;
@@ -508,7 +512,7 @@ h2 {
   margin: auto;
 }
 #hero .hero__content--text {
-  color: #666666;
+  color: #0c0a0a;
   text-align: justify;
   margin: 1.5rem 0;
 }
@@ -554,7 +558,7 @@ h2 {
 }
 #steps .step__content p {
   width: 100%;
-  color: #666666;
+  color: #0c0a0a;
   text-align: justify;
   margin-bottom: 2rem;
   font-size: 1.125rem;
@@ -601,7 +605,7 @@ h2 {
   margin: 1rem 0;
 }
 #services .service-wrapper .service p {
-  color: #666666;
+  color: #0c0a0a;
   font-size: 0.875rem;
 }
 
@@ -797,6 +801,95 @@ h2 {
   border: 1px solid #18a867 !important;
 }
 
+.about-creation-story,
+.about-our-purpose {
+  border-bottom: 1px solid #cccccc;
+}
+
+.about .about-services img {
+  width: 100%;
+  border: 5px solid #999999;
+  border-radius: 50%;
+}
+
+.team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.team-wrapper .employee .employee-image {
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.25rem;
+  margin-bottom: 15px;
+}
+.team-wrapper .employee .employee-image:hover .employee-links {
+  transform: translateY(0);
+  opacity: 1;
+}
+.team-wrapper .employee .employee-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-wrapper .employee .employee-image .employee-links {
+  opacity: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(100%);
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.15s linear;
+}
+.team-wrapper .employee .employee-image .employee-links a {
+  padding: 8px;
+  transform: rotate(45deg);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.15s ease;
+}
+.team-wrapper .employee .employee-image .employee-links a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(-45deg);
+}
+.team-wrapper .employee .employee-image .employee-links a.social__github svg {
+  fill: #211f1f;
+}
+.team-wrapper .employee .employee-image .employee-links a.social__instagram svg {
+  fill: #cd486b;
+}
+.team-wrapper .employee .employee-image .employee-links a:hover.social__github {
+  background: #211f1f;
+}
+.team-wrapper .employee .employee-image .employee-links a:hover.social__github svg {
+  fill: #ffffff;
+}
+.team-wrapper .employee .employee-image .employee-links a:hover.social__instagram {
+  background: #bc2a8d;
+}
+.team-wrapper .employee .employee-image .employee-links a:hover.social__instagram svg {
+  fill: #ffffff;
+}
+.team-wrapper .employee .employee-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+.team-wrapper .employee .employee-role {
+  text-align: center;
+  line-height: 1;
+}
+
 .contact-bg {
   min-height: 100vh;
   width: 100%;
@@ -889,12 +982,5 @@ h2 {
 #order #importance .importance-reasons .card img {
   width: 100%;
 }
-.active-text { 
-  margin-top: 1rem;
-  padding: 0.7rem;
-  background-color: #ffefa6;
-  font-size: 0.9rem;
-  border-radius: 0.25rem;
-  border: 1px solid #f6d233;
-}
+
 /*# sourceMappingURL=main.css.map */
