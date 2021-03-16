@@ -9,7 +9,7 @@ class TestUrls(SimpleTestCase):
         url = reverse('core:home')
         self.assertEqual(resolve(url).func.view_class, Home)
 
-    def test_contact_us_page_(self):
+    def test_contact_us_page(self):
         url = reverse('core:contact_us')
         self.assertEqual(resolve(url).func.view_class, ContactUs)
 
