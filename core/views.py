@@ -1,3 +1,4 @@
+from typing import List
 from django.shortcuts import redirect, render
 from django.urls.base import reverse_lazy
 from django.views.generic.base import TemplateView, View
@@ -33,6 +34,10 @@ class AboutUsList(ListView):
     template_name = 'core/about-us.html'
     context_object_name = 'members'
 
+class Portfolio(ListView):
+    queryset = WorkSamples.objects.all()
+    template_name = 'core/portfolio.html'
+    context_object_name = 'worksamples'
 
 # def contactusview(request):
 #     form = ContactUsForm()
