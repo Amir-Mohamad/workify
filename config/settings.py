@@ -113,11 +113,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static_root/')
+STATIC_ROOT = '/home/megacod2/public_html/static/'
 STATICFILES_DIRS = [BASE_DIR, "static"]
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = '/home/megacod2/public_html/media/'
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
