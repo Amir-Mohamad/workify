@@ -169,7 +169,7 @@ dmypy.json
 # Translations
 
 # Django stuff:
-
+/media
 # Flask stuff:
 
 # Scrapy stuff:
