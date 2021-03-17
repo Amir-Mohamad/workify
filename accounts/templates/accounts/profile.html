@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block title %}
 پروفایل
 {% endblock title %}
@@ -36,7 +37,7 @@
     </form>
     <div class="account-settings__image d-none">
       <img
-        src="/images/illustrations/profile-details.svg"
+        src="{% static 'images/illustrations/profile-details.svg' %}"
         alt="Profile Details"
       />
     </div>
