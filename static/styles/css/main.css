@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @font-face {
   font-family: "Iran Sans";
-  src: url("/static/fonts/IRANSans.ttf") format("truetype");
+  src: url("../../fonts/IRANSans.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -202,6 +202,14 @@ main p {
   background-position: right 1em top 50%;
 }
 
+.text-primary {
+  font-weight: bold;
+  color: #eabd00;
+}
+.text-primary:hover {
+  border-bottom: 1px solid #eabd00;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -210,7 +218,7 @@ h2 {
 @media screen and (min-width: 768px) {
   .hero__illustration-image {
     visibility: visible !important;
-    background-image: url("/static/images/Group-home.png");
+    background-image: url("/images/group-home.png");
     background-position: -5.5rem 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -397,6 +405,20 @@ h2 {
   }
   #contact-form .basic-info__wrapper #fullname-control {
     margin-left: 1rem;
+  }
+
+  .account-settings {
+    width: 50% !important;
+  }
+
+  .account-settings__image {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 50% !important;
+  }
+  .account-settings__image img {
+    width: 80% !important;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -723,7 +745,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/static/images/backgrounds/login-bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/images/backgrounds/login-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -897,7 +919,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/static/images/backgrounds/contact-bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/images/backgrounds/contact-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
