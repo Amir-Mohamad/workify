@@ -5,12 +5,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 # Deploy Part
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['megacoders.ir', 'www.megacoders.ir', '127.0.0.1', 'localhost']
-<<<<<<< HEAD
-=======
-# SECURE_SSL_REDIRECT = True
->>>>>>> 856df442d2e2657579d4655d531e7251036e3c14
+SECURE_SSL_REDIRECT = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
