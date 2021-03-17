@@ -69,3 +69,5 @@ class ContactUs(LoginRequiredMixin, message, CreateView):
 class OrderView(TemplateView):
     template_name = 'core/order.html'
     
+class ServicesView(TemplateView):
+    template_name = 'core/services.html'

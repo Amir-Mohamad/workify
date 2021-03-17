@@ -10,5 +10,6 @@ urlpatterns = [
     path('contact-us/', views.ContactUs.as_view(), name="contact_us"),
     # path('contact-us/', views.ContactUs.as_view(), name="contact_us"), # CBV
     path('team/portfolio/', views.Portfolio.as_view(), name="portfolio"),
-    path('order/', views.OrderView.as_view(), name="order")
+    path('order/', views.OrderView.as_view(), name="order"),
+    path('team/services/', views.ServicesView.as_view(), name="services"),
 ]
