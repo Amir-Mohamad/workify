@@ -14,11 +14,10 @@
                 <div class="site-sections col-12 col-md-6 col-lg-4">
                     <h3>بخش های سایت</h3>
                     <ul class="d-sm-flex d-md-inline-block">
-                        <li class="mx-sm-2"><a href="#">وبلاگ</a></li>
-                        <li class="mx-sm-2"><a href="#">نمونه کارها</a></li>
+                        <li class="mx-sm-2"><a href="{% url 'core:portfolio' %}">نمونه کارها</a></li>
                         <li class="mx-sm-2"><a href="{% url 'core:order' %}">سفارش</a></li>
                         <li class="mx-sm-2">
-                            <a href="/pages/team/about.html">درباره ما</a>
+                            <a href="{% url 'core:about_us' %}">درباره ما</a>
                         </li>
                         <li class="mx-sm-2">
                             <a href="{% url 'core:contact_us' %}">ارتباط با ما</a>
@@ -63,7 +62,7 @@
                 <div class="col-12 col-md-10 py-1">
                     <p>
                         کليه حقوق محصولات و محتوای اين سایت متعلق به مگاکدرز می باشد و
-                        هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت
+                         هر گونه کپی برداری از محتوا و محصولات سایت غیر مجاز و بدون رضایت
                         ماست.
                     </p>
                 </div>

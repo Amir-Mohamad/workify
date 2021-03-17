@@ -1,3 +1,4 @@
+from django.http import response
 from django.test import TestCase, Client
 from django.urls import reverse
 from accounts.models import User
@@ -12,6 +13,11 @@ class UserRegisterTest(TestCase):
         response = self.client.get(reverse('accounts:register'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'accounts/register.html')
+
+    def test_user_login_GET(self):
+        response = self.client.get(reverse('accounts:login'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'accounts/login.html')
     
 
     # NOTE: I remove this func becuase we have 2 setep authentication !! (next page will be /verify)

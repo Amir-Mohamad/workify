@@ -9,3 +9,14 @@
     border-radius: 0.25rem;
     border: 1px solid #f6d233;
 }
+
+.portfolio-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-btn {
+    border-radius: 0.3rem;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}

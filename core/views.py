@@ -2,12 +2,13 @@ from typing import List
 from django.shortcuts import redirect, render
 from django.urls.base import reverse_lazy
 from django.views.generic.base import TemplateView, View
+from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.views.generic import FormView, CreateView
 from django.contrib.messages.views import SuccessMessageMixin as message
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
-from .models import AboutUsModel, WorkSamples
+from .models import AboutUsModel, AboutUsText, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm
 
 
@@ -33,6 +34,7 @@ class AboutUsList(ListView):
     queryset = AboutUsModel.objects.filter(is_active=True)
     template_name = 'core/about-us.html'
     context_object_name = 'members'
+
 
 class Portfolio(ListView):
     queryset = WorkSamples.objects.all()
