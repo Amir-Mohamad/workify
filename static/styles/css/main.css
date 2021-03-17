@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @font-face {
   font-family: "Iran Sans";
-  src: url("../../fonts/IRANSans.ttf") format("truetype");
+  src: url("/static/fonts/IRANSans.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -218,7 +218,7 @@ h2 {
 @media screen and (min-width: 768px) {
   .hero__illustration-image {
     visibility: visible !important;
-    background-image: url("/images/group-home.png");
+    background-image: url("/static/images/Group-home.png");
     background-position: -5.5rem 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -745,7 +745,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/images/backgrounds/login-bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/static/images/backgrounds/login-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -919,7 +919,7 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/images/backgrounds/contact-bg.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("/static/images/backgrounds/contact-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
