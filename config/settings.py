@@ -4,12 +4,10 @@ from django.urls import reverse_lazy
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
-
-DEBUG = True
-
-
-ALLOWED_HOSTS = []
-
+# Deploy Part
+DEBUG = False
+ALLOWED_HOSTS = ['*']
+SECURE_SSL_REDIRECT = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
