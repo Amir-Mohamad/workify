@@ -126,7 +126,12 @@ CONTENT_TYPES = {'image'}
 MAX_UPLOAD_SIZE = 2097152 # 2 MB (2000000)  
 VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.megacoders.ir'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'support@megacoders.ir'
+EMAIL_HOST_PASSWORD = '4PBN+ntvG88h!6'
 
 # Sweet Alert packge
 
