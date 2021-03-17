@@ -6,7 +6,7 @@ SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 # Deploy Part
 DEBUG = False
-ALLOWED_HOSTS = ['megacoders.ir', 'http://megacoders.ir', 'https://megacoders.ir']
+ALLOWED_HOSTS = ['megacoders.ir', 'www.megacoders.ir', '127.0.0.1', 'localhost']
 SECURE_SSL_REDIRECT = True
 
 INSTALLED_APPS = [
