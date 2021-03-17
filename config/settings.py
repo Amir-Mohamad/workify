@@ -117,7 +117,7 @@ STATIC_ROOT = '/home/megacod2/public_html/static/'
 STATICFILES_DIRS = [BASE_DIR, "static"]
 
 
-STATIC_ROOT = '/home/megacod2/public_html/media/'
+MEDIA_ROOT = '/home/megacod2/public_html/media/'
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
