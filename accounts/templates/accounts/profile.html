@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+{% load widget_tweaks %}
 {% load static %}
 {% block title %}
 پروفایل
@@ -9,30 +9,35 @@
 <main class="container">
   <h1>تنظیمات حساب کاربری</h1>
   <div class="d-flex">
-    <form class="account-settings" style="width: 100%">
+    <form method="POST" class="account-settings" style="width: 100%" enctype="multipart/form-data"> {% csrf_token %}
       <div class="form-control">
         <label for="email">ایمیل</label>
-        <input type="email" id="email" placeholder="name@example.com" />
+        <!-- <input type="email" id="email" placeholder="name@example.com" /> -->
+        {{form.email|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"}}
       </div>
       <div class="form-control">
         <label for="name">نام</label>
-        <input type="text" id="name" placeholder="مثال: مهدی" />
+        <!-- <input type="text" id="name" placeholder="مثال: مهدی" /> -->
+        {{form.first_name|attr:"type:name"|attr:"id:name"|attr:"placeholder:مثال: مهدی"}}
+
       </div>
       <div class="form-control">
         <label for="surname">نام خانوادگی</label>
-        <input type="text" id="surname" placeholder="مثال: محمدی" />
+        <!-- <input type="text" id="surname" placeholder="مثال: محمدی" /> -->
+        {{form.last_name|attr:"type:text"|attr:"id:surname"|attr:"placeholder:مثال: محمدی"}}
       </div>
       <div class="form-control">
         <label for="photo">تصویر پروفایل</label>
-        <input type="file" id="photo" />
+        <!-- <input type="file" id="photo" /> -->
+        {{form.avatar|attr:"type:file"|attr:"id:photo"}}
       </div>
       <p>
         آیا میخواهید رمز عبور خود را تغییر دهید؟
-        <a href="#" class="text-primary">تغییر رمز عبور</a>
+        <a href="{% url 'accounts:password_change' %}" class="text-primary">تغییر رمز عبور</a>
       </p>
       <div>
-        <button class="btn btn-primary">بروزرسانی</button>
-        <button class="btn btn-secondary">تنطیم مجدد</button>
+        <button type="submit" class="btn btn-primary">بروزرسانی</button>
+        <!-- <button class="btn btn-secondary">تنطیم مجدد</button> -->
       </div>
     </form>
     <div class="account-settings__image d-none">
