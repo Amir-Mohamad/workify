@@ -20,7 +20,7 @@ class Profile(LoginRequiredMixin, message, UpdateView):
 	template_name = 'accounts/profile.html'
 	form_class = ProfileForm
 	success_url = reverse_lazy('accounts:profile')
-	success_message = 'your account updated.'
+	success_message = 'پروفایل شما با موفقیت اپدیت شد'
 
 	def get_object(self):
 		return User.objects.get(pk=self.request.user.pk)
@@ -39,8 +39,8 @@ def UserRegister(request):
 		global cd, code
 		cd = form.cleaned_data
 		code = randint(10100, 30100)
-		subject = 'Verify Code' ; msg = f"you code is {code} for {cd['email']} registration"
-		send_mail(subject, msg, 'info@mega.ir', (cd['email'],))
+		subject = 'کد تایید' ; msg = f"کد تایید {code} برای {cd['email']} \n تیم برنامه نویسی مگاکدرز"
+		send_mail(subject, msg, 'support@megacoders.ir', (cd['email'],))
 		return redirect('accounts:verify')
 	return render(request, 'accounts/register.html', {'form':form})
 
