@@ -24,4 +24,4 @@ class TestViews(TestCase):
 
     def test_register_view(self):
         url = reverse('accounts:register')
-        self.assertEqual(resolve(url).func.view_class, UserRegister)
+        self.assertEqual(resolve(url).func, UserRegister)
