@@ -1,8 +1,7 @@
-from django.http import response
 from django.test import TestCase
 from django.test.client import Client
 from django.urls import reverse, resolve
-from ..views import UserLogin
+from ..views import UserLogin, UserRegister
 
 
 class TestViews(TestCase):
@@ -22,3 +21,7 @@ class TestViews(TestCase):
     def test_login_view(self):
         url = reverse('accounts:login')
         self.assertEqual(resolve(url).func.view_class, UserLogin)
+
+    def test_register_view(self):
+        url = reverse('accounts:register')
+        self.assertEqual(resolve(url).func.view_class, UserRegister)
