@@ -17,7 +17,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
     # Local Apps
     'accounts.apps.AccountsConfig',
     # 'blog.apps.BlogConfig',
