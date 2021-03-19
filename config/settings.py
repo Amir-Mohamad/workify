@@ -5,9 +5,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 # Deploy Part
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['megacoders.ir', 'www.megacoders.ir', '127.0.0.1', 'localhost']
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -120,11 +120,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/megacod2/public_html/static/'
+# STATIC_ROOT = '/home/megacod2/public_html/static/'
 STATICFILES_DIRS = [BASE_DIR, "static"]
 
 
-MEDIA_ROOT = '/home/megacod2/public_html/media/'
+# MEDIA_ROOT = '/home/megacod2/public_html/media/'
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
