@@ -5,7 +5,7 @@
         <a class="main-header__logo" href="{% url 'core:home' %}">مگاکدرز</a>
         <nav class="main-nav">
             <ul class="d-flex align-items-center">
-                <li><a href="#">خدمات ما</a></li>
+                <li><a href="{% url 'core:services' %}">خدمات ما</a></li>
                 <li><a href="{% url 'core:portfolio' %}">نمونه کارها</a></li>
                 <li><a href="{% url 'core:order' %}">سفارش</a></li>
                 <!-- <li><a href="#">وبلاگ</a></li> -->
@@ -35,7 +35,7 @@
             <a class="main-header__logo" href="{% url 'core:home' %}">مگاکدرز</a>
             <nav class="main-nav">
                 <ul class="d-flex align-items-center">
-                    <li><a href="#">خدمات ما</a></li>
+                    <li><a href="{% url 'core:services' %}">خدمات ما</a></li>
                     <li><a href="{% url 'core:portfolio' %}">نمونه کارها</a></li>
                     <li><a href="{% url 'core:order' %}">سفارش</a></li>
                     <!-- <li><a href="#">وبلاگ</a></li> -->
@@ -78,7 +78,7 @@
         </div>
         <nav class="main-nav d-flex justify-content-center">
             <ul class="header-mobile__menu">
-                <li><a href="#">خدمات ما</a></li>
+                <li><a href="{% url 'core:services' %}">خدمات ما</a></li>
                 <li><a href="{% url 'core:portfolio' %}">نمونه کارها</a></li>
                 <li><a href="{% url 'core:order' %}">سفارش</a></li>
                 <!-- <li><a href="#">وبلاگ</a></li> -->
