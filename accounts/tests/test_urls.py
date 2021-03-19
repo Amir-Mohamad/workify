@@ -18,6 +18,7 @@ class TestViews(TestCase):
         response = self.client.get(reverse('accounts:register'))
         self.assertEqual(response.status_code, 200)
 
+    # Testing views
     def test_login_view(self):
         url = reverse('accounts:login')
         self.assertEqual(resolve(url).func.view_class, UserLogin)
