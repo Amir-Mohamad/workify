@@ -133,6 +133,8 @@ CONTENT_TYPES = {'image'}
 MAX_UPLOAD_SIZE = 2097152 # 2 MB (2000000)  
 VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 
+
+# Email Config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.megacoders.ir'
 EMAIL_PORT = 587
