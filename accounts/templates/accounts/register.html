@@ -12,8 +12,11 @@
 			<header class="signup-header">
 				<h1>ثبت نام در مگاکدرز</h1>
 				<p>عضو هستید؟ <a href="{% url 'accounts:login' %}">وارد شوید!</a></p>
+				{% if form.errors %}
+				<p class="alert alert-danger">{{form.errors}}</p>
+			{% endif %}
 			</header>
-			<form method="POST" id="signup-form"> {% csrf_token %}
+			<form method="POST" id="signup-form" novalidate> {% csrf_token %}
 				<div id="email-control" class="form-control">
 					<label for="email">ایمیل</label>
 					{{form.email|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
