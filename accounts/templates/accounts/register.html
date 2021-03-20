@@ -12,9 +12,6 @@
 			<header class="signup-header">
 				<h1>ثبت نام در مگاکدرز</h1>
 				<p>عضو هستید؟ <a href="{% url 'accounts:login' %}">وارد شوید!</a></p>
-				{% if form.errors %}
-				<p class="alert alert-danger">{{form.errors}}</p>
-			{% endif %}
 			</header>
 			<form method="POST" id="signup-form" novalidate> {% csrf_token %}
 				<div id="email-control" class="form-control">
@@ -54,5 +51,13 @@
 				</button>
 			</form>
 		</section>
+		<link rel="stylesheet" href="{% static 'styles/toastr.min.css' %}">
+		<script src="{% static 'script/toastr.min.js' %}"></script>
+		<script>
+			toastr.info('Are you the 6 fingered man?')
+		    window.alert("daf")
+			console.log("tasdasd")
+		</script>
 	</div>
-	{% endblock content %}
+
+{% endblock content %}
