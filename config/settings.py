@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': 'megacod2_thisismegacoders2',
         'USER': 'megacod2_Amir-Mohamad2',
         'PASSWORD': '85=[~,H+8Eyx',
