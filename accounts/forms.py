@@ -20,7 +20,7 @@ class RegisterForm(forms.Form):
 		validators=[EmailValidator('correct email'),],
 		error_messages=messages,
 	)
-	password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+	password1 = forms.CharField(error_messages=messages,widget=forms.PasswordInput(attrs={'class':'form-control'}))
 	password2 = forms.CharField(error_messages=messages, widget=forms.PasswordInput(attrs={'class':'form-control'}))
 
 	def clean_email(self):
@@ -41,7 +41,7 @@ class RegisterForm(forms.Form):
 
 
 class VerifyForm(forms.Form):
-    verifier = forms.IntegerField()
+    verifier = forms.IntegerField(error_messages=messages)
 
 
 class ProfileForm(forms.ModelForm):
