@@ -1,4 +1,3 @@
-from typing import List
 from django.shortcuts import redirect, render
 from django.urls.base import reverse_lazy
 from django.views.generic.base import TemplateView, View
@@ -8,11 +7,12 @@ from django.views.generic import FormView, CreateView
 from django.contrib.messages.views import SuccessMessageMixin as message
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
-from .models import AboutUsModel, AboutUsText, WorkSamples
-from .forms import ContactUsForm, NewsLetterForm
 # Custom errors template libraries
 from django.shortcuts import render_to_response
-from django.template import RequestContext
+from .models import AboutUsModel, AboutUsText, WorkSamples
+from .forms import ContactUsForm, NewsLetterForm
+
+
 
 class Home(View):
     template_name = 'core/home.html'
@@ -76,8 +76,7 @@ class ServicesView(TemplateView):
 
 
 # Costom error templates
-
-def handler404(request, exception, template_name="core/404.html"):
+def handler404(request, exception, template_name="errors/404.html"):
     response = render_to_response(template_name)
     response.status_code = 404
     return response
