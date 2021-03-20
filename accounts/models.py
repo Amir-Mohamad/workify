@@ -11,7 +11,7 @@ class User(AbstractUser):
 	is_author = models.BooleanField('author', default=False,
 		help_text='Determines whether this user is allowed to write an article')
 	avatar = models.ImageField(upload_to='avatars/', default='avatars/default.jpg', blank=True, null=True)
-
+	team_member = models.BooleanField(default=False, blank=True, null=True)
 	objects = UserManager()
 
 	USERNAME_FIELD = 'email'
