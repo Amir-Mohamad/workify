@@ -6,11 +6,19 @@ from django.core.validators import EmailValidator
 from accounts.models import User
 
 
+messages = {
+	'required':'این فیلد اجباری است',
+	'invalid':'لطفا یک ایمیل معتبر وارد کنید',
+	'max_length':'تعداد کاراکترها بیشتر از حد مجاز است'
+}
+
+
 class RegisterForm(forms.Form):
 	email = forms.EmailField(
 		widget=forms.EmailInput(attrs={'class':'form-control'}),
 		label='email',
-		validators=[EmailValidator('correct email')],
+		validators=[EmailValidator('correct email'),],
+		error_messages=messages,
 	)
 	password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
 	password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
