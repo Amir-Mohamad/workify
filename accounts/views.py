@@ -19,7 +19,7 @@ class Profile(LoginRequiredMixin, message, UpdateView):
 	model = User
 	template_name = 'accounts/profile.html'
 	form_class = ProfileForm
-	success_url = reverse_lazy('accounts:profile')
+	success_url = reverse_lazy('core:home')
 	success_message = 'پروفایل شما با موفقیت اپدیت شد'
 
 	def get_object(self):
