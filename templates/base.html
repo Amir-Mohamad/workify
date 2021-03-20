@@ -23,18 +23,16 @@
 <body>
     <!--Navbar-->
     {% include 'inc/navbar.html' %}
+    <!--Messages-->
+    {% include 'inc/messages.html' %}
+    {% block content %}
 
-    <div class="jumbotron">
-        <!--Messages-->
-        {% include 'inc/messages.html' %}
-        {% block content %}
-    
-        {% endblock %}
-    </div>
+    {% endblock %}
     {% include 'inc/footer.html' %}
-
     <!--Scripts -->
     <script src="{% static 'script/main.js' %}"></script>
+
+    {% include 'inc/alerts.html' %}
 </body>
 
 </html>
