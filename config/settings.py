@@ -7,7 +7,7 @@ SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 # Deploy Part
 DEBUG = False
 ALLOWED_HOSTS = ['megacoders.ir', 'www.megacoders.ir', '127.0.0.1', 'localhost']
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -63,21 +63,21 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'megacod2_thisismegacoders2',
-        'USER': 'megacod2_Amir-Mohamad2',
-        'PASSWORD': '85=[~,H+8Eyx',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mysql.connector.django',
+#         'NAME': 'megacod2_thisismegacoders2',
+#         'USER': 'megacod2_Amir-Mohamad2',
+#         'PASSWORD': '85=[~,H+8Eyx',
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -120,11 +120,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/megacod2/public_html/static/'
+# STATIC_ROOT = '/home/megacod2/public_html/static/'
 STATICFILES_DIRS = [BASE_DIR, "static"]
 
 
-MEDIA_ROOT = '/home/megacod2/public_html/media/'
+# MEDIA_ROOT = '/home/megacod2/public_html/media/'
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
