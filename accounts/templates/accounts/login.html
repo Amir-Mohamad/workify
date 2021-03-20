@@ -16,6 +16,9 @@
 					عضو نیستید؟
 					<a href="{% url 'accounts:register' %}">همین حالا عضو شو!</a>
 				</p>
+				{% if form.errors %}
+					<p class="alert alert-danger">{{form.errors}}</p>
+				{% endif %}
 			</header>
 			<form method="POST" id="login-form" novalidate> {% csrf_token %}
 				<div id="email-control" class="form-control">
