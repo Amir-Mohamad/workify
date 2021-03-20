@@ -13,7 +13,6 @@ from .models import AboutUsModel, AboutUsText, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm
 
 
-
 class Home(View):
     template_name = 'core/home.html'
     
