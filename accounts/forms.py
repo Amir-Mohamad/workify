@@ -43,7 +43,7 @@ class ProfileForm(forms.ModelForm):
 
 	class Meta:
 		model = User
-		fields = ("email", "first_name", "last_name", "avatar")
+		fields = ("email", "first_name", "last_name", "avatar", "team_member")
 		widgets = {'avatar':forms.FileInput}
 
 	def clean_avatar(self):
