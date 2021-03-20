@@ -21,7 +21,7 @@ class RegisterForm(forms.Form):
 		error_messages=messages,
 	)
 	password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
-	password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}))
+	password2 = forms.CharField(error_messages=messages, widget=forms.PasswordInput(attrs={'class':'form-control'}))
 
 	def clean_email(self):
 		email = self.cleaned_data.get('email')
