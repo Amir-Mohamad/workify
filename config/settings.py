@@ -63,10 +63,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'megacod2_thisismegacoders',
+        'USER': 'megacod2_Amir-Mohamad',
+        'PASSWORD': 'qT2!r_&-[rg=',
     }
 }
 
@@ -75,7 +83,7 @@ DATABASES = {
 #         'ENGINE': 'mysql.connector.django',
 #         'NAME': 'megacod2_thisismegacoders2',
 #         'USER': 'megacod2_Amir-Mohamad2',
-#         'PASSWORD': '85=[~,H+8Eyx',
+#         'PASSWORD': 'qT2!r_&-[rg=',
 #     }
 # }
 
@@ -120,11 +128,11 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/megacod2/public_html/static/'
+# STATIC_ROOT = '/home/megacod2/public_html/static/'
 STATICFILES_DIRS = [BASE_DIR, "static"]
 
 
-MEDIA_ROOT = '/home/megacod2/public_html/media/'
+# MEDIA_ROOT = '/home/megacod2/public_html/media/'
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
