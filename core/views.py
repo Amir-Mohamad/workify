@@ -71,7 +71,9 @@ def orderview(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
-
+            f = form.save(commit=False)
+            f.user = request.user
+            f.save()
     
 class ServicesView(TemplateView):
     template_name = 'core/services.html'
