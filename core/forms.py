@@ -19,3 +19,4 @@ class ContactUsForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = OrderModel
+        fields = ('title', 'description', 'phone')
