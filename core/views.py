@@ -67,8 +67,9 @@ class ContactUs(LoginRequiredMixin, message, CreateView):
         f.save()
         return super().form_valid(form)
 
-class OrderView(TemplateView):
-    template_name = 'core/order.html'
+def orderview(request):
+    if request.method == 'POST':
+        form = OrderForm()
     
 class ServicesView(TemplateView):
     template_name = 'core/services.html'
