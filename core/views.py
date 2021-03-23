@@ -77,6 +77,8 @@ def orderview(request):
             f.save()
             messages.success(request, 'You successfully submited your form')
             return redirect('core:home')
+    else:
+        form = OrderForm()
     
 
 class ServicesView(TemplateView):
