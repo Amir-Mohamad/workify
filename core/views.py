@@ -74,6 +74,7 @@ def orderview(request):
             f = form.save(commit=False)
             f.user = request.user
             f.save()
+            messages.success(request, 'You successfully submited your form')
             return redirect('core:home')
     
 
