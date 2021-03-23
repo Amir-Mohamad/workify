@@ -1,7 +1,7 @@
 from django import forms
 from django.db import models
 from django.db.models import fields
-from .models import ContactUsModel, NewsLetterModel
+from .models import ContactUsModel, NewsLetterModel, OrderModel
 
 
 class NewsLetterForm(forms.ModelForm):
@@ -17,3 +17,5 @@ class ContactUsForm(forms.ModelForm):
 
 
 class OrderForm(forms.ModelForm):
+    class Meta:
+        model = OrderModel
