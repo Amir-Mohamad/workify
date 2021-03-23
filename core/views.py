@@ -75,6 +75,7 @@ def orderview(request):
             f.user = request.user
             f.save()
     
+    
 class ServicesView(TemplateView):
     template_name = 'core/services.html'
 
