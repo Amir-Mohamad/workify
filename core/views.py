@@ -67,6 +67,7 @@ class ContactUs(LoginRequiredMixin, message, CreateView):
         f.save()
         return super().form_valid(form)
 
+
 def orderview(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
