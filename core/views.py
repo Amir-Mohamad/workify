@@ -10,7 +10,7 @@ from django.urls import reverse
 # Custom errors template libraries
 from django.shortcuts import render_to_response
 from .models import AboutUsModel, AboutUsText, WorkSamples
-from .forms import ContactUsForm, NewsLetterForm
+from .forms import ContactUsForm, NewsLetterForm, OrderForm
 
 
 class Home(View):
@@ -75,7 +75,7 @@ def orderview(request):
             f.user = request.user
             f.save()
     
-    
+
 class ServicesView(TemplateView):
     template_name = 'core/services.html'
 
