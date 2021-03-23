@@ -74,6 +74,7 @@ def orderview(request):
             f = form.save(commit=False)
             f.user = request.user
             f.save()
+            return redirect('core:home')
     
 
 class ServicesView(TemplateView):
