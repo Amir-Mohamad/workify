@@ -20,3 +20,6 @@ class TestUrls(SimpleTestCase):
     def test_services_page(self):
         url = reverse('core:services')
         self.assertEqual(resolve(url).func.view_class, ServicesView)
+
+    def test_portfolio_page(self):
+        
