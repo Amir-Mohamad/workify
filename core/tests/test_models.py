@@ -12,5 +12,6 @@ class TestModels(TestCase):
             description="This is description"
         )
     
-    def test_contact_title(self):
+    def test_contact_model(self):
         self.assertEqual(self.contact.title, "This is a title")
+        self.assertEqual(self.contact.description, "This is description")
