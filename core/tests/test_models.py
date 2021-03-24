@@ -23,8 +23,9 @@ class TestWorkSample(TestCase):
             title="title",
             description="description",
             github="https://github.com/Amir-Mohamad",
-            is_promote=True,
+            promote=True,
             is_production=False,
         )
 
-    
+    def test_workSampleModel(self):
+        self.assertEqual(self.workSample.title, "title")
