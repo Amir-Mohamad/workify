@@ -23,4 +23,4 @@ class TestUrls(SimpleTestCase):
 
     def test_portfolio_page(self):
         url = reverse('core:portfolio')
-        self.assertEqual(resolve(url).func.view_class, PortfolioView)
+        self.assertEqual(resolve(url).func.view_class, Portfolio)
