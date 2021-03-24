@@ -79,6 +79,7 @@ def orderview(request):
             return redirect('core:home')
     else:
         form = OrderForm()
+    return render(request, 'core/order.html', {'form':form})
     
 
 class ServicesView(TemplateView):

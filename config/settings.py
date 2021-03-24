@@ -5,9 +5,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 # Deploy Part
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['megacoders.ir', 'www.megacoders.ir', '127.0.0.1', 'localhost']
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -63,20 +63,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'megacod2_thisismegacoders',
-        'USER': 'megacod2_Amir-Mohamad',
-        'PASSWORD': 'qT2!r_&-[rg=',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'megacod2_thisismegacoders',
+#         'USER': 'megacod2_Amir-Mohamad',
+#         'PASSWORD': 'qT2!r_&-[rg=',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
