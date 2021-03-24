@@ -25,5 +25,6 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
     
     def test_portfolio_page_GET(self):
+        response = self.client.get(reverse('core:portfolio'))
         
     
