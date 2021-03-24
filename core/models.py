@@ -35,7 +35,7 @@ class WorkSamples(models.Model):
     """
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=200)  # Note => DONT change it to TextField (sth like preview)
-    cover = models.ImageField()
+    cover = models.ImageField(null=True, blank=True)
     github = models.CharField(max_length=300, null=True, blank=True)  # Github repo
     promote = models.BooleanField(default=False)
     is_production = models.BooleanField(default=False)
