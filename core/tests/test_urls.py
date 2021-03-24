@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import resolve, reverse
-from core.views import AboutUsList, ContactUs, Home, ServicesView
+from core.views import AboutUsList, ContactUs, Home, Portfolio, ServicesView
 
 
 class TestUrls(SimpleTestCase):
@@ -23,4 +23,4 @@ class TestUrls(SimpleTestCase):
 
     def test_portfolio_page(self):
         url = reverse('core:portfolio')
-        
+        self.assertEqual(resolve(url).func.view_class, PortfolioView)
