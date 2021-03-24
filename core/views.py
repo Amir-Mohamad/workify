@@ -86,6 +86,7 @@ class ServicesView(TemplateView):
 
 
 # Costom error templates
+# error 404
 def handler404(request, exception, template_name="errors/404.html"):
     response = render_to_response(template_name)
     response.status_code = 404
