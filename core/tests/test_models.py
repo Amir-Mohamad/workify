@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ..models import ContactUsModel, NewsLetterModel, WorkSamples
+from ..models import ContactUsModel, NewsLetterModel, OrderModel, WorkSamples
 from accounts.models import User
 
 
@@ -40,7 +40,6 @@ class TestWorkSample(TestCase):
         self.assertEqual(self.workSample.promote, True)
 
 
-
 # NewsLetterModel
 class TestNewsModel(TestCase):
     def setUp(self):
@@ -52,3 +51,15 @@ class TestNewsModel(TestCase):
     def test_news_model(self):
         self.assertEqual(self.news.email, "jack@gmail.com")
         self.assertEqual(self.news.phone, "09104958451")
+
+class TestOrderModel(TestCase):
+    def setUp(self):
+        user = User.objects.create(
+            email="jack@gmail.com",
+            password="testpassamir",
+        )
+        self.order = OrderModel.objects.create(
+            title="title",
+            description="description",
+            phone="09104958451"
+        )
