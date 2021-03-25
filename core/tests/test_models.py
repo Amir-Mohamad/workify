@@ -69,3 +69,5 @@ class TestOrderModel(TestCase):
         self.assertEqual(self.order.title, "title")
         self.assertEqual(self.order.description, "description")
         self.assertEqual(self.order.phone, "09104958451")
+
+

@@ -8,7 +8,7 @@ class AboutUsModel(models.Model):
     bio = models.CharField(max_length=200)
     github = models.CharField(max_length=500)
     instagram = models.CharField(max_length=500)
-    image = models.ImageField()
+    image = models.ImageField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
 
