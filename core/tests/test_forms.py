@@ -11,3 +11,7 @@ class TestContactForm(SimpleTestCase):
             'description':"description"}
         )
         self.assertTrue(form.is_valid())
+    
+    def test_invalid_form(self):
+        form = ContactUsForm(data={})
+        self.assertEqual(len(form.errors), 3)
