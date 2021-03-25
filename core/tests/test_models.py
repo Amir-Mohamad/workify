@@ -56,10 +56,16 @@ class TestOrderModel(TestCase):
     def setUp(self):
         user = User.objects.create(
             email="jack@gmail.com",
-            password="testpassamir",
+            password="amir1384",
         )
         self.order = OrderModel.objects.create(
+            user=user,
             title="title",
             description="description",
             phone="09104958451"
         )
+
+    def test_order_model(self):
+        self.assertEqual(self.order.title, "title")
+        self.assertEqual(self.order.description, "description")
+        self.assertEqual(self.order.phone, "09104958451")
