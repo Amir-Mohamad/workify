@@ -1,8 +1,10 @@
 from django.test import TestCase
-from ..models import ContactUsModel, WorkSamples
+from ..models import ContactUsModel, NewsLetterModel, WorkSamples
 from accounts.models import User
 
 
+
+# ContactUsModel
 class TestContactModels(TestCase):
     def setUp(self):
         user = User.objects.create(email="jack@gmail.com", password="amir1384")
@@ -19,6 +21,8 @@ class TestContactModels(TestCase):
         self.assertEqual(self.contact.description, "This is description")
 
 
+
+# WorkSampleModel
 class TestWorkSample(TestCase):
     def setUp(self):
         self.workSample = WorkSamples.objects.create(
@@ -35,4 +39,16 @@ class TestWorkSample(TestCase):
         self.assertEqual(self.workSample.github, "https://github.com/Amir-Mohamad")
         self.assertEqual(self.workSample.promote, True)
 
-class Test
+
+
+# NewsLetterModel
+class TestNewsModel(TestCase):
+    def setUp(self):
+        self.news = NewsLetterModel.objects.create(
+            email="jack@gmail.com",
+            phone="09104958451",
+        )
+    
+    def test_news_model(self):
+        self.assertEqual(self.news.email, "jack@gmail.com")
+        self.assertEqual(self.news.phone, "09104958451")
