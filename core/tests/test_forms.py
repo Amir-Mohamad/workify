@@ -26,4 +26,6 @@ class TestOrderForm(SimpleTestCase):
         })
         self.assertTrue(form.is_valid())
 
-        
+    def test_invalid_form(self):
+        form = OrderForm(data={})
+        self.assertEqual(len(form.is_valid), 3)
