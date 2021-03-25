@@ -2,8 +2,8 @@ from django.test import SimpleTestCase
 from ..forms import ContactUsForm, NewsLetterForm, OrderForm
 
 
+# ContactUsForm
 class TestContactForm(SimpleTestCase):
-
     def test_valid_data(self):
         form = ContactUsForm(data={
             'fullname':"amirmohamad", 
@@ -17,6 +17,7 @@ class TestContactForm(SimpleTestCase):
         self.assertEqual(len(form.errors), 3)
 
 
+# OrderForm
 class TestOrderForm(SimpleTestCase):
     def test_valid_data(self):
         form = OrderForm(data={
@@ -31,6 +32,7 @@ class TestOrderForm(SimpleTestCase):
         self.assertEqual(len(form.errors), 3)
 
 
+# NewsLetterForm
 class TestNewModel(SimpleTestCase):
     def test_valid_data(self):
         form = NewsLetterForm(data={
