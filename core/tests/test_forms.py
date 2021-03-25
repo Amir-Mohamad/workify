@@ -28,4 +28,17 @@ class TestOrderForm(SimpleTestCase):
 
     def test_invalid_form(self):
         form = OrderForm(data={})
-        self.assertEqual(len(form.is_valid), 3)
+        self.assertEqual(len(form.errors), 3)
+
+
+class TestNewModel(SimpleTestCase):
+    def test_form_valid(self):
+        form = NewsLetterForm(data={
+            'email':'jack@gmail.com',
+            'phone':'09104958451',
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_form_invalid(self):
+        form = NewsLetterForm(data={})
+        self.assertEqual(len(form.errors), 2)
