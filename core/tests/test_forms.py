@@ -32,7 +32,7 @@ class TestOrderForm(SimpleTestCase):
 
 
 class TestNewModel(SimpleTestCase):
-    def test_form_valid(self):
+    def test_valid_data(self):
         form = NewsLetterForm(data={
             'email':'jack@gmail.com',
             'phone':'09104958451',
