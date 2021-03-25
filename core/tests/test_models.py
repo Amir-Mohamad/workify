@@ -2,6 +2,7 @@ from django.test import TestCase
 from ..models import ContactUsModel, WorkSamples
 from accounts.models import User
 
+
 class TestContactModels(TestCase):
     def setUp(self):
         user = User.objects.create(email="jack@gmail.com", password="amir1384")
@@ -16,6 +17,7 @@ class TestContactModels(TestCase):
         self.assertEqual(self.contact.fullname, "Amir-Mohamad")
         self.assertEqual(self.contact.title, "This is a title")
         self.assertEqual(self.contact.description, "This is description")
+
 
 class TestWorkSample(TestCase):
     def setUp(self):
