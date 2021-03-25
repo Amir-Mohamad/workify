@@ -71,11 +71,18 @@ class TestOrderModel(TestCase):
 
 
 class TestAboutUsModel(TestCase):
-    self.about = AboutUsModel.objects.create(
-        name="name",
-        bio="bio",
-        github="https://github.com/Amir-Mohamad",
-        instagram="https://instagram.com/megacoders",
-        is_active=True,
-        created=timezone.now()
-    )
+    def setUp(self):
+        self.about = AboutUsModel.objects.create(
+            name="name",
+            bio="bio",
+            github="https://github.com/Amir-Mohamad",
+            instagram="https://instagram.com/megacoders",
+            is_active=True,
+        )
+    
+    def test_about_model(self):
+        self.assertEqual(self.about.name, "name")
+        self.assertEqual(self.about.bio, "bio")
+        self.assertEqual(self.about.github, "https://github.com/Amir-Mohamad")
+        self.assertEqual(self.about.instagram, "https://instagram.com/megacoders")
+        self.assertEqual(self.about.is_active, True)
