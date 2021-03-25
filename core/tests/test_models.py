@@ -31,3 +31,8 @@ class TestWorkSample(TestCase):
 
     def test_workSampleModel(self):
         self.assertEqual(self.workSample.title, "title")
+        self.assertEqual(self.workSample.description, "description")
+        self.assertEqual(self.workSample.github, "https://github.com/Amir-Mohamad")
+        self.assertEqual(self.workSample.promote, True)
+
+class Test
