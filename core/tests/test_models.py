@@ -1,7 +1,6 @@
 from django.test import TestCase
-from ..models import ContactUsModel, NewsLetterModel, OrderModel, WorkSamples
+from ..models import AboutUsModel, ContactUsModel, NewsLetterModel, OrderModel, WorkSamples
 from accounts.models import User
-
 
 
 # ContactUsModel
@@ -71,3 +70,12 @@ class TestOrderModel(TestCase):
         self.assertEqual(self.order.phone, "09104958451")
 
 
+class TestAboutUsModel(TestCase):
+    self.about = AboutUsModel.objects.create(
+        name="name",
+        bio="bio",
+        github="https://github.com/Amir-Mohamad",
+        instagram="https://instagram.com/megacoders",
+        is_active=True,
+        created=timezone.now()
+    )
