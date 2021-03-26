@@ -1,8 +1,8 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from ..forms import RegisterForm
 from ..models import User
 
-class TestRegisterForm(SimpleTestCase):
+class TestRegisterForm(TestCase):
 
     def test_register_form(self):
         User.objects.create(
@@ -14,4 +14,4 @@ class TestRegisterForm(SimpleTestCase):
             'password':"jackpass1384",
         })
 
-        self.assertEqual(len(form.is_valid()), 1)
+        self.assertEqual(bool(form.is_valid()), False)
