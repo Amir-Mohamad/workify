@@ -9,4 +9,9 @@ class TestRegisterForm(SimpleTestCase):
             email="jack@gmail.com",
             password="jackpass1384",
         )
-        
+        form = RegisterForm(data={
+            "email":"jack@gmail.com",
+            'password':"jackpass1384",
+        })
+
+        self.assertEqual(len(form.is_valid()), 1)
