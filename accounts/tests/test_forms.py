@@ -22,7 +22,6 @@ class TestRegisterForm(TestCase):
         form = RegisterForm(data={
             'email':'amir@gmail.com',
             'password1':'Amirtest1897',
-            'password1':'Amirtest1898',
+            'password2':'Amirtest189',
         })
-
-        self.assertEqual(bool(form.is_valid()), False)
+        self.assertEqual(len(form.errors), 1)
