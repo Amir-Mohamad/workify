@@ -25,3 +25,12 @@ class TestRegisterForm(TestCase):
             'password2':'Amirtest189',
         })
         self.assertEqual(len(form.errors), 1)
+
+    def test_email_not_valid(self):
+        form = RegisterForm(data={
+            'email':'abc',
+            'password1':'Amirtest1897',
+            'password2':'Amirtest1897',
+        })
+        
+        self.assertEqual(len(form.errors), 1)
