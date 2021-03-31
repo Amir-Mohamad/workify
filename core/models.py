@@ -20,13 +20,7 @@ class AboutUsModel(models.Model):
     def __str__(self):
         return self.name
 
-class AboutUsText(models.Model):
-    first_text = models.TextField()
-    second_text = models.TextField()
-    third_text = models.TextField()
 
-    def __str__(self):
-        return self.first_text[:50]
 
 
 class WorkSamples(models.Model):
