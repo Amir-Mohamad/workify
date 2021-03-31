@@ -11,4 +11,3 @@ class AboutUsAdmin(admin.ModelAdmin):
 admin.site.register(AboutUsModel, AboutUsAdmin)
 admin.site.register(ContactUsModel)
 admin.site.register(WorkSamples)
-admin.site.register(AboutUsText)

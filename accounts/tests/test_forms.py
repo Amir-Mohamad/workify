@@ -2,6 +2,7 @@ from django.test import TestCase
 from ..forms import RegisterForm
 from ..models import User
 
+
 class TestRegisterForm(TestCase):
 
     def test_register_form_used_before(self):
@@ -32,5 +33,4 @@ class TestRegisterForm(TestCase):
             'password1':'Amirtest1897',
             'password2':'Amirtest1897',
         })
-        
         self.assertEqual(len(form.errors), 1)
