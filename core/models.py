@@ -21,8 +21,6 @@ class AboutUsModel(models.Model):
         return self.name
 
 
-
-
 class WorkSamples(models.Model):
     """
         In home page we can just have 6 worksample => So i put promote
