@@ -49,11 +49,13 @@ class ProfileForm(forms.ModelForm):
 		self.file = kwargs.pop('file')
 		super().__init__(*args, **kwargs)
 
+
 	class Meta:
 		model = User
 		fields = ("email", "first_name", "last_name", "avatar", "team_member")
 		widgets = {'avatar':forms.FileInput}
 
+	# Validating the size 
 	def clean_avatar(self):
 		if self.file is not None:
 			picture = self.cleaned_data.get('avatar')
