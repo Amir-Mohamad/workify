@@ -1,13 +1,17 @@
 import os
 from django.urls import reverse_lazy
 
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
+
 # Deploy Part
 DEBUG = True
-ALLOWED_HOSTS = ['megacoders.ir', 'www.megacoders.ir', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['megacoders.ir',
+                 'www.megacoders.ir', '127.0.0.1', 'localhost']
 # SECURE_SSL_REDIRECT = True
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,6 +73,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -114,7 +119,6 @@ LOGOUT_URL = reverse_lazy('accounts:logout')
 LOGOUT_REDIRECT_URL = reverse_lazy('core:home')
 
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -124,7 +128,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 STATIC_URL = '/static/'
@@ -138,7 +141,7 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 CONTENT_TYPES = {'image'}
-MAX_UPLOAD_SIZE = 2097152 # 2 MB (2000000)  
+MAX_UPLOAD_SIZE = 2097152  # 2 MB (2000000)
 VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 
 
@@ -149,7 +152,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'support@megacoders.ir'
 EMAIL_HOST_PASSWORD = '4PBN+ntvG88h!6'
-
-# Sweet Alert packge
-
-# Arvan Cloud or Araz Cloud 
