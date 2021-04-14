@@ -26,9 +26,11 @@ class WorkSamples(models.Model):
         In home page we can just have 6 worksample => So i put promote
     """
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=200)  # Note => DONT change it to TextField (sth like preview)
+    # Note => DONT change it to TextField (sth like preview)
+    description = models.CharField(max_length=200)
     cover = models.ImageField(null=True, blank=True)
-    github = models.CharField(max_length=300, null=True, blank=True)  # Github repo
+    github = models.CharField(
+        max_length=300, null=True, blank=True)  # Github repo
     promote = models.BooleanField(default=False)
     is_production = models.BooleanField(default=False)
 

@@ -4,7 +4,7 @@ from core.views import AboutUsList, ContactUs, Home, Portfolio, ServicesView
 
 
 class TestUrls(SimpleTestCase):
-    
+
     def test_home_page_view(self):
         url = reverse('core:home')
         self.assertEqual(resolve(url).func.view_class, Home)
