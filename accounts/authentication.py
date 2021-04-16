@@ -1,6 +1,7 @@
 # from django.contrib.auth.backends import ModelBackend
 # from accounts.models import User
 
+
 # class EmailBackend(ModelBackend):
 
 # 	def authenticate(self, request, username=None, password=None, **kwargs):
@@ -18,7 +19,7 @@
 
 # =========================================================
 
-### OLD AUTH VIEW - EMAD
+# OLD AUTH VIEW - EMAD
 
 # class UserRegister(AuthenticatedMixin, message, CreateView):
 # 	template_name = 'accounts/register.html'
@@ -38,7 +39,7 @@
 # 		return valid
 
 
-## FORMS.PY
+# FORMS.PY
 
 # class RegisterForm(forms.ModelForm):
 # 	class Meta:
@@ -48,7 +49,7 @@
 
 # =========================================================
 
-### NEW AUTH VIEW - EMAD
+# NEW AUTH VIEW - EMAD
 
 # class UserRegister(AuthenticatedMixin, message, CreateView):
 # 	template_name = 'accounts/register.html'
@@ -89,7 +90,7 @@
 # 			messages.error(self.request, 'code is wrong', 'danger')
 # 			return redirect('accounts:verify')
 
-## FORMS.PY
+# FORMS.PY
 
 # class RegisterForm(forms.ModelForm):
 # 	class Meta:
