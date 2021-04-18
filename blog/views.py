@@ -11,16 +11,18 @@ class ArticleList(ListView):
     queryset = Article.objects.filter(is_active=True)
     context_object_name = 'articles'
 
-# Showes more info for each article 
+# Showes more info for each article
 # NOTE Bug: context object name should change !!
+
+
 class ArticleDetail(DetailView):
     context_object_name = 'articles'
 
     def get_object(self):
-            slug = self.kwargs.get('slug')
-            id = self.kwargs.get('id')
-            article = get_object_or_404(Article, id=id, slug=slug)
-            return article
+        slug = self.kwargs.get('slug')
+        id = self.kwargs.get('id')
+        article = get_object_or_404(Article, id=id, slug=slug)
+        return article
 
 
 # This Will Show posts by Specified Category
@@ -31,7 +33,8 @@ class CategoryList(ListView):
     def get_queryset(self):
         global category
         slug = self.kwargs.get('slug')
-        category = get_object_or_404(Category.objects.filter(is_active=True), slug=slug)
+        category = get_object_or_404(
+            Category.objects.filter(is_active=True), slug=slug)
         return category.articles.published()
 
     def get_context_data(self, **kwargs):
