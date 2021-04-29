@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutUsModel, AboutUsText, ContactUsModel, WorkSamples
+from .models import AboutUsModel, ContactUsModel, WorkSamples
 
 
 class AboutUsAdmin(admin.ModelAdmin):

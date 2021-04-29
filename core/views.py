@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 # Custom errors template libraries
 from django.shortcuts import render_to_response
-from .models import AboutUsModel, AboutUsText, WorkSamples
+from .models import AboutUsModel, WorkSamples
 from .forms import ContactUsForm, NewsLetterForm, OrderForm
 
 

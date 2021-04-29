@@ -1,22 +1,40 @@
 ::placeholder {
-    font-family: "Iran Sans";
+	font-family: "Iran Sans";
 }
-.active-text { 
-    margin-top: 1rem;
-    padding: 0.7rem;
-    background-color: #ffefa6;
-    font-size: 0.9rem;
-    border-radius: 0.25rem;
-    border: 1px solid #f6d233;
+.active-text {
+	margin-top: 1rem;
+	padding: 0.7rem;
+	background-color: #ffefa6;
+	font-size: 0.9rem;
+	border-radius: 0.25rem;
+	border: 1px solid #f6d233;
 }
 
 .portfolio-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .portfolio-btn {
-    border-radius: 0.3rem;
-    padding-left: 50px !important;
-    padding-right: 50px !important;
+	border-radius: 0.3rem;
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+}
+.main-content {
+	margin: 100px;
+}
+.main-box {
+	padding: 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 7px 0 #eaeff4;
+	-moz-box-shadow: 0 0 7px 0 #eaeff4;
+	-webkit-box-shadow: 0 0 7px 0 #eaeff4;
+	position: relative;
+	border: 1px solid #ecf0f4;
+	background-color: #fff;
+}
+.main-box img {
+	width: 15rem;
 }

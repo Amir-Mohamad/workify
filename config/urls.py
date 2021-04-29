@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('accounts/', include('accounts.urls', namespace="accounts")),
     path('', include('core.urls', namespace="core")),
+    path('blog/', include('blog.urls', namespace="blog")),
     path('admin/', admin.site.urls),
 ]
 handler404 = 'core.views.handler404'

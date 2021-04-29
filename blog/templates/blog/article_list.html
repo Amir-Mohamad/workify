@@ -1,4 +1,12 @@
-{% for obj in articles %}
-    <a href="{% url 'blog:article_detail' obj.id obj.slug %}"> {{obj.title}} </a>
-    <!-- and ... -->
-{% endfor %}
+{% extends 'base.html' %} {% block content %}
+<div class="main-content">
+	{% for obj in articles %}
+	<span class="main-box">
+		<img src="{{ obj.cover.url }}" />
+		<a href="{% url 'blog:article_detail' obj.id obj.slug %}">
+			{{obj.title}}
+		</a>
+	</span>
+	{% endfor %}
+</div>
+{% endblock content %}
