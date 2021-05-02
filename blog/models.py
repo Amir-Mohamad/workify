@@ -18,6 +18,9 @@ class Category(models.Model):
 
 
 class Article(models.Model):
+    """
+        Will be used for Megacoders Desktop app
+    """
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='articles')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
