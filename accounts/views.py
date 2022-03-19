@@ -8,6 +8,7 @@ from django.contrib.messages.views import SuccessMessageMixin as message
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 from django.core.mail import send_mail
 from accounts.mixins import AuthenticatedMixin
 from accounts.models import User
@@ -39,8 +40,8 @@ def UserRegister(request):
 		global cd, code
 		cd = form.cleaned_data
 		code = randint(10100, 30100)
-		subject = 'کد تایید' ; msg = f"کد تایید {code} برای {cd['email']} \n تیم برنامه نویسی مگاکدرز"
-		send_mail(subject, msg, 'support@megacoders.ir', (cd['email'],))
+		subject = 'کد تایید' ; msg = f"کد تایید {code} برای {cd['email']} \n تیم برنامه نویسی ورکیفای"
+		send_mail(subject, msg, settings.EMAIL_HOST_USER, (cd['email'],))
 		return redirect('accounts:verify')
 	return render(request, 'accounts/register.html', {'form':form})
 

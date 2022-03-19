@@ -8,8 +8,8 @@ SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 # Deploy Part
 DEBUG = True
-ALLOWED_HOSTS = ['megacoders.ir',
-                 'www.megacoders.ir', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['workify.ir',
+                 'www.workify.ir', '127.0.0.1', 'localhost']
 # SECURE_SSL_REDIRECT = True
 
 
@@ -77,7 +77,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'megacod2_thisismegacoders',
+#         'NAME': 'megacod2_thisisworkify',
 #         'USER': 'megacod2_Amir-Mohamad',
 #         'PASSWORD': 'qT2!r_&-[rg=',
 #     }
@@ -86,7 +86,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'mysql.connector.django',
-#         'NAME': 'megacod2_thisismegacoders2',
+#         'NAME': 'megacod2_thisisworkify2',
 #         'USER': 'megacod2_Amir-Mohamad2',
 #         'PASSWORD': 'qT2!r_&-[rg=',
 #     }
@@ -147,8 +147,8 @@ VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 
 # Email Config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.megacoders.ir'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'support@megacoders.ir'
-EMAIL_HOST_PASSWORD = '4PBN+ntvG88h!6'
+EMAIL_HOST_USER = 'workifymail@gmail.com'
+EMAIL_HOST_PASSWORD = 'poiuyt98765'

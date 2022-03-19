@@ -6,7 +6,7 @@ from accounts.models import User
 # ContactUsModel
 class TestContactModels(TestCase):
     def setUp(self):
-        user = User.objects.create(email="jack@gmail.com", password="amir1384")
+        user = User.objects.create(email="jack@gmail.com", password="pass1234")
         self.contact = ContactUsModel.objects.create(
             user=user,
             fullname="Amir-Mohamad",
@@ -56,7 +56,7 @@ class TestOrderModel(TestCase):
     def setUp(self):
         user = User.objects.create(
             email="jack@gmail.com",
-            password="amir1384",
+            password="pass1234",
         )
         self.order = OrderModel.objects.create(
             user=user,
@@ -77,7 +77,7 @@ class TestAboutUsModel(TestCase):
             name="name",
             bio="bio",
             github="https://github.com/Amir-Mohamad",
-            instagram="https://instagram.com/megacoders",
+            instagram="https://instagram.com/workify",
             is_active=True,
         )
 
@@ -86,5 +86,5 @@ class TestAboutUsModel(TestCase):
         self.assertEqual(self.about.bio, "bio")
         self.assertEqual(self.about.github, "https://github.com/Amir-Mohamad")
         self.assertEqual(self.about.instagram,
-                         "https://instagram.com/megacoders")
+                         "https://instagram.com/workify")
         self.assertEqual(self.about.is_active, True)
