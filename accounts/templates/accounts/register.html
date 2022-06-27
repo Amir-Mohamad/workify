@@ -1,5 +1,5 @@
-{% extends 'accounts/base.html' %} {% load static %} {% load widget_tweaks %} {%
-block title %} ثبت نام {% endblock title %} {% block content %}
+{% extends 'accounts/base.html' %} {% load static %} {% load widget_tweaks %} 
+{% block title %} ثبت نام {% endblock title %} {% block content %}
 
 <body>
 	<div class="signup-bg">
@@ -12,14 +12,12 @@ block title %} ثبت نام {% endblock title %} {% block content %}
 				{% csrf_token %}
 				<div id="email-control" class="form-control">
 					<label for="email">ایمیل</label>
-					{{form.email|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا
-					ایمیل خود را وارد کنید"}}
+					{{form.email|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 				</div>
 				<div class="form-control">
 					<label for="password">کلمه عبور</label>
 					<div style="position: relative">
-						{{form.password1|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفاکلمه
-						عبور را وارد کنید"}}
+						{{form.password1|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفاکلمه عبور را وارد کنید"}}
 						<button type="button" class="password-icon">
 							<svg
 								class="eye-off"
@@ -41,8 +39,7 @@ block title %} ثبت نام {% endblock title %} {% block content %}
 				<div class="form-control">
 					<label for="confirm-password">تکرار کلمه عبور</label>
 					<div style="position: relative">
-						{{form.password2|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفاکلمه
-						عبور را وارد کنید"}}
+						{{form.password2|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفاکلمه عبور را وارد کنید"}}
 						<button type="button" class="confirm-password-icon">
 							<svg
 								class="eye-off"

@@ -1,7 +1,7 @@
 Django==2.2
 django-crispy-forms==1.11.1
 django-widget-tweaks==1.4.8
-Pillow==8.1.0
+Pillow
 pytz==2021.1
 sqlparse==0.4.1
 sweetify==2.0.0

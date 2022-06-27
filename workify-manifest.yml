@@ -1,0 +1,21 @@
+kind: ExternalService
+name: workify
+spec:
+  allow_http: true
+  image: workify
+  image_pull_policy: Always
+  path: /
+  port: 80
+  replicas: 1
+  resources:
+    memory: 200Mi
+  source:
+    context: .
+    media_path: media
+    project_type: django
+    python_version: '3.7'
+    static_path: static_root
+    wsgi: config.wsgi
+  volume_mounts:
+    - mount_path: /usr/src/app/media
+      sub_path: workify/media

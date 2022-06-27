@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from django.contrib.auth import authenticate
 from django.core.mail import send_mail
 from accounts.mixins import AuthenticatedMixin
 from accounts.models import User
@@ -34,33 +35,39 @@ class Profile(LoginRequiredMixin, message, UpdateView):
 
 
 # Registering user
-def UserRegister(request):
-	form = RegisterForm(request.POST or None)
-	if form.is_valid():
-		global cd, code
-		cd = form.cleaned_data
-		code = randint(10100, 30100)
-		subject = 'کد تایید' ; msg = f"کد تایید {code} برای {cd['email']} \n تیم برنامه نویسی ورکیفای"
-		send_mail(subject, msg, settings.EMAIL_HOST_USER, (cd['email'],))
-		return redirect('accounts:verify')
+def user_register(request):
+	if request.method == 'POST':
+		form = RegisterForm(request.POST or None)
+		if form.is_valid():
+			# global cd, code
+			# cd = form.cleaned_data
+			# code = randint(10100, 30100)
+			# subject = 'کد تایید' ; msg = f"کد تایید {code} برای {cd['email']} \n تیم برنامه نویسی ورکیفای"
+			# send_mail(subject, msg, settings.EMAIL_HOST_USER, (cd['email'],))
+			cd = form.cleaned_data
+			User.objects.create_user(cd['email'], cd['password1'])
+			messages.success(request, 'شما با موفقیت ثبت نام کردید', 'success')
+			return redirect('accounts:profile')
+	else:
+		form = RegisterForm() 
 	return render(request, 'accounts/register.html', {'form':form})
 
 
-# 2 step authentication with verify code
-def VerifyCode(request):
-	form = VerifyForm(request.POST or None)
-	if form.is_valid():
-		verifier = form.cleaned_data.get('verifier')
-		if code == verifier:
-			user = User.objects.create_user(email=cd['email'], password=cd['password1'])
-			user.save()
-			login(request, user)
-			messages.success(request, 'شما با موفقیت ثبت نام کردید')
-			return redirect('core:home')
-		else:
-			messages.error(request, 'کد وارد شده اشتباه است')
-			return redirect('accounts:verify')
-	return render(request, 'accounts/verify.html', {'form':form})
+# # 2 step authentication with verify code
+# def VerifyCode(request):
+# 	form = VerifyForm(request.POST or None)
+# 	if form.is_valid():
+# 		verifier = form.cleaned_data.get('verifier')
+# 		if code == verifier:
+# 			user = User.objects.create_user(email=cd['email'], password=cd['password1'])
+# 			user.save()
+# 			login(request, user)
+# 			messages.success(request, 'شما با موفقیت ثبت نام کردید')
+# 			return redirect('core:home')
+# 		else:
+# 			messages.error(request, 'کد وارد شده اشتباه است')
+# 			return redirect('accounts:verify')
+# 	return render(request, 'accounts/verify.html', {'form':form})
 
 
 # Login user

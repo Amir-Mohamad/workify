@@ -8,8 +8,7 @@ SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 # Deploy Part
 DEBUG = True
-ALLOWED_HOSTS = ['workify.ir',
-                 'www.workify.ir', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 # SECURE_SSL_REDIRECT = True
 
 
@@ -131,8 +130,9 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # STATIC_ROOT = '/home/megacod2/public_html/static/'
-STATICFILES_DIRS = [BASE_DIR, "static"]
+# STATICFILES_DIRS = [BASE_DIR, "staticdirs"]
 
 
 # MEDIA_ROOT = '/home/megacod2/public_html/media/'
@@ -147,8 +147,8 @@ VALID_FORMATS = {'jpeg', 'jpg', 'png'}
 
 # Email Config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.zoho.eu'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'workifymail@gmail.com'
-EMAIL_HOST_PASSWORD = 'poiuyt98765'
+EMAIL_HOST_PASSWORD = 'YHzPLeTGDnG5'

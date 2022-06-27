@@ -1,5 +1,5 @@
-{% extends 'accounts/base.html' %} {% load static %} {% load widget_tweaks %} {%
-block title %} ورود {% endblock title %} {% block content %}
+{% extends 'accounts/base.html' %} {% load static %} \
+{% load widget_tweaks %} {% block title %} ورود {% endblock title %} {% block content %}
 <div class="login-bg">
 	<div class="login-wrapper">
 		<section class="login-card">
@@ -17,14 +17,12 @@ block title %} ورود {% endblock title %} {% block content %}
 				{% csrf_token %}
 				<div id="email-control" class="form-control">
 					<label for="email">ایمیل</label>
-					{{form.username|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا
-					ایمیل خود را وارد کنید"}}
+					{{form.username|attr:"type:email"|attr:"id:email"|attr:"placeholder:name@example.com"|attr:"data-error:لطفا ایمیل خود را وارد کنید"}}
 				</div>
 				<div id="password-control" class="form-control">
 					<label for="password">کلمه عبور</label>
 					<div style="position: relative">
-						{{form.password|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفا
-						کلمه عبور را وارد کنید"}}
+						{{form.password|attr:"type:password"|attr:"id:password"|attr:"placeholder:••••••••"|attr:"data-error:لطفا کلمه عبور را وارد کنید"}}
 						<button type="button" class="password-icon">
 							<svg
 								class="eye-off"
