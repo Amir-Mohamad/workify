@@ -7,7 +7,7 @@ SECRET_KEY = '$sool69_c@_iti!y7(*#z)j))-nq5ra-6npl89@!4f2xxttqun'
 
 
 # Deploy Part
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 # SECURE_SSL_REDIRECT = True
 

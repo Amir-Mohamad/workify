@@ -20,7 +20,24 @@
 <!-- Services end -->
 
 <!-- Portfolio -->
-{% include 'pages/portfolio.html' %}
+<section id="portfolio" class="container">
+    <header class="portfolio-header">
+        <h2>نمونه کارها</h2>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</p>
+    </header>
+    <div class="portfolio-wrapper">
+        {% for worksample in worksamples %}
+        <div class="portfolio">
+            <img src="{{ worksample.cover.url }}" alt="" />
+            <a href="{{ worksample.github }}">
+                <h3>{{ worksample.title }}</h3>
+                <p>{{ worksample.description }}</p>
+            </a>
+        </div>
+        {% endfor %}
+        <!--TODO: WE SHOULD ADD BUTTON "GITHUB" AND PRODUCTION BAGE - and more worksamples btn-->
+    </div>
+</section>
 <div class="container portfolio-div">
     <a href="{% url 'core:portfolio' %}" class="btn btn-primary portfolio-btn">مشاهده بیشتر</a>
 </div>
